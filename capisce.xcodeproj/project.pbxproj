@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81233F2102B1CA1A9158F1C3 /* Pods_capisce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DC66D6E650C4CC5A52108 /* Pods_capisce.framework */; };
 		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
 		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
 		FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		146C42CA4AC05AD9F42D6CAE /* Pods-capisce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capisce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-capisce/Pods-capisce.debug.xcconfig"; sourceTree = "<group>"; };
+		499D9E16641010610C496F5D /* Pods-capisce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capisce.release.xcconfig"; path = "Pods/Target Support Files/Pods-capisce/Pods-capisce.release.xcconfig"; sourceTree = "<group>"; };
+		BE6DC66D6E650C4CC5A52108 /* Pods_capisce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_capisce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE4A4091FE2EF200098C173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81233F2102B1CA1A9158F1C3 /* Pods_capisce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,11 +81,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C493A457AE8D76B300C6E82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE6DC66D6E650C4CC5A52108 /* Pods_capisce.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEC3C66647531D1C57113329 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				146C42CA4AC05AD9F42D6CAE /* Pods-capisce.debug.xcconfig */,
+				499D9E16641010610C496F5D /* Pods-capisce.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FFE4A3F61FE2EF1F0098C173 = {
 			isa = PBXGroup;
 			children = (
 				FFE4A4011FE2EF200098C173 /* capisce */,
 				FFE4A4001FE2EF200098C173 /* Products */,
+				CEC3C66647531D1C57113329 /* Pods */,
+				0C493A457AE8D76B300C6E82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFE4A4271FE2EF200098C173 /* Build configuration list for PBXNativeTarget "capisce" */;
 			buildPhases = (
+				D45B45924C358D3D394A2B06 /* [CP] Check Pods Manifest.lock */,
 				FFE4A3FB1FE2EF200098C173 /* Sources */,
 				FFE4A3FC1FE2EF200098C173 /* Frameworks */,
 				FFE4A3FD1FE2EF200098C173 /* Resources */,
+				8BD7C9609B41CAB469F7FCD0 /* [CP] Embed Pods Frameworks */,
+				C83FEBF08A90556660F70320 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +341,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BD7C9609B41CAB469F7FCD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-capisce/Pods-capisce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C83FEBF08A90556660F70320 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-capisce/Pods-capisce-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D45B45924C358D3D394A2B06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFE4A3FB1FE2EF200098C173 /* Sources */ = {
@@ -476,6 +551,7 @@
 		};
 		FFE4A4281FE2EF200098C173 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 146C42CA4AC05AD9F42D6CAE /* Pods-capisce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +566,7 @@
 		};
 		FFE4A4291FE2EF200098C173 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 499D9E16641010610C496F5D /* Pods-capisce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
