@@ -15,7 +15,7 @@ target ‘capisce’ do
   pod 'AlamofireImage'
   pod 'M13Checkbox', '3.1.1'
   pod 'SMSSDK', '3.0.1'
-  pod 'ALCameraViewController', '2.0.3'
+  pod 'ALCameraViewController'
 
   # AWS S3 for image storage
   pod 'AWSCore', '2.6.4'
@@ -43,7 +43,7 @@ target ‘capisce’ do
   # Mob sharing -----------------------------------------------------
 
   #UI design
-  pod 'Material', '2.10.2'
+  pod 'Material'
 
   #Network connection detactor
   pod 'ReachabilitySwift'
@@ -56,6 +56,5 @@ target ‘capisce’ do
   # indicator
   pod 'BPCircleActivityIndicator'
 
-  pod 'TGRefreshSwift'
 
 end
