@@ -121,9 +121,7 @@
 		FFE4A4011FE2EF200098C173 /* capisce */ = {
 			isa = PBXGroup;
 			children = (
-				FFE4A4331FE2F0900098C173 /* Manager */,
 				FFE4A4321FE2F07C0098C173 /* StoryBoard */,
-				FFE4A4311FE2F0720098C173 /* Model */,
 				FFE4A4301FE2F0680098C173 /* Controller */,
 				FFE4A4021FE2EF200098C173 /* AppDelegate.swift */,
 				FFE4A4091FE2EF200098C173 /* Assets.xcassets */,
@@ -142,13 +140,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		FFE4A4311FE2F0720098C173 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		FFE4A4321FE2F07C0098C173 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,13 +149,6 @@
 				FFE4A4361FE2F1240098C173 /* Main */,
 			);
 			path = StoryBoard;
-			sourceTree = "<group>";
-		};
-		FFE4A4331FE2F0900098C173 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		FFE4A4361FE2F1240098C173 /* Main */ = {
