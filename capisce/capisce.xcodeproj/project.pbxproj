@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
+		FFE4A4051FE2EF200098C173 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4041FE2EF200098C173 /* ViewController.swift */; };
+		FFE4A4081FE2EF200098C173 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4061FE2EF200098C173 /* Main.storyboard */; };
+		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
+		FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */; };
+		FFE4A4181FE2EF200098C173 /* capisceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4171FE2EF200098C173 /* capisceTests.swift */; };
+		FFE4A4231FE2EF200098C173 /* capisceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4221FE2EF200098C173 /* capisceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFE4A4141FE2EF200098C173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFE4A3F71FE2EF1F0098C173 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE4A3FE1FE2EF200098C173;
+			remoteInfo = capisce;
+		};
+		FFE4A41F1FE2EF200098C173 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFE4A3F71FE2EF1F0098C173 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE4A3FE1FE2EF200098C173;
+			remoteInfo = capisce;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFE4A4041FE2EF200098C173 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFE4A4071FE2EF200098C173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFE4A4091FE2EF200098C173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFE4A40C1FE2EF200098C173 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFE4A40E1FE2EF200098C173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE4A4131FE2EF200098C173 /* capisceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = capisceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE4A4171FE2EF200098C173 /* capisceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capisceTests.swift; sourceTree = "<group>"; };
+		FFE4A4191FE2EF200098C173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE4A41E1FE2EF200098C173 /* capisceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = capisceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE4A4221FE2EF200098C173 /* capisceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capisceUITests.swift; sourceTree = "<group>"; };
+		FFE4A4241FE2EF200098C173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFE4A3FC1FE2EF200098C173 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4A4101FE2EF200098C173 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4A41B1FE2EF200098C173 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFE4A3F61FE2EF1F0098C173 = {
+			isa = PBXGroup;
+			children = (
+				FFE4A4011FE2EF200098C173 /* capisce */,
+				FFE4A4161FE2EF200098C173 /* capisceTests */,
+				FFE4A4211FE2EF200098C173 /* capisceUITests */,
+				FFE4A4001FE2EF200098C173 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFE4A4001FE2EF200098C173 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFE4A3FF1FE2EF200098C173 /* capisce.app */,
+				FFE4A4131FE2EF200098C173 /* capisceTests.xctest */,
+				FFE4A41E1FE2EF200098C173 /* capisceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFE4A4011FE2EF200098C173 /* capisce */ = {
+			isa = PBXGroup;
+			children = (
+				FFE4A4021FE2EF200098C173 /* AppDelegate.swift */,
+				FFE4A4041FE2EF200098C173 /* ViewController.swift */,
+				FFE4A4061FE2EF200098C173 /* Main.storyboard */,
+				FFE4A4091FE2EF200098C173 /* Assets.xcassets */,
+				FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */,
+				FFE4A40E1FE2EF200098C173 /* Info.plist */,
+			);
+			path = capisce;
+			sourceTree = "<group>";
+		};
+		FFE4A4161FE2EF200098C173 /* capisceTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFE4A4171FE2EF200098C173 /* capisceTests.swift */,
+				FFE4A4191FE2EF200098C173 /* Info.plist */,
+			);
+			path = capisceTests;
+			sourceTree = "<group>";
+		};
+		FFE4A4211FE2EF200098C173 /* capisceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FFE4A4221FE2EF200098C173 /* capisceUITests.swift */,
+				FFE4A4241FE2EF200098C173 /* Info.plist */,
+			);
+			path = capisceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFE4A3FE1FE2EF200098C173 /* capisce */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE4A4271FE2EF200098C173 /* Build configuration list for PBXNativeTarget "capisce" */;
+			buildPhases = (
+				FFE4A3FB1FE2EF200098C173 /* Sources */,
+				FFE4A3FC1FE2EF200098C173 /* Frameworks */,
+				FFE4A3FD1FE2EF200098C173 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = capisce;
+			productName = capisce;
+			productReference = FFE4A3FF1FE2EF200098C173 /* capisce.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFE4A4121FE2EF200098C173 /* capisceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE4A42A1FE2EF200098C173 /* Build configuration list for PBXNativeTarget "capisceTests" */;
+			buildPhases = (
+				FFE4A40F1FE2EF200098C173 /* Sources */,
+				FFE4A4101FE2EF200098C173 /* Frameworks */,
+				FFE4A4111FE2EF200098C173 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFE4A4151FE2EF200098C173 /* PBXTargetDependency */,
+			);
+			name = capisceTests;
+			productName = capisceTests;
+			productReference = FFE4A4131FE2EF200098C173 /* capisceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFE4A41D1FE2EF200098C173 /* capisceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE4A42D1FE2EF200098C173 /* Build configuration list for PBXNativeTarget "capisceUITests" */;
+			buildPhases = (
+				FFE4A41A1FE2EF200098C173 /* Sources */,
+				FFE4A41B1FE2EF200098C173 /* Frameworks */,
+				FFE4A41C1FE2EF200098C173 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFE4A4201FE2EF200098C173 /* PBXTargetDependency */,
+			);
+			name = capisceUITests;
+			productName = capisceUITests;
+			productReference = FFE4A41E1FE2EF200098C173 /* capisceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFE4A3F71FE2EF1F0098C173 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = capisce;
+				TargetAttributes = {
+					FFE4A3FE1FE2EF200098C173 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					FFE4A4121FE2EF200098C173 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FFE4A3FE1FE2EF200098C173;
+					};
+					FFE4A41D1FE2EF200098C173 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FFE4A3FE1FE2EF200098C173;
+					};
+				};
+			};
+			buildConfigurationList = FFE4A3FA1FE2EF1F0098C173 /* Build configuration list for PBXProject "capisce" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFE4A3F61FE2EF1F0098C173;
+			productRefGroup = FFE4A4001FE2EF200098C173 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFE4A3FE1FE2EF200098C173 /* capisce */,
+				FFE4A4121FE2EF200098C173 /* capisceTests */,
+				FFE4A41D1FE2EF200098C173 /* capisceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFE4A3FD1FE2EF200098C173 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */,
+				FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */,
+				FFE4A4081FE2EF200098C173 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4A4111FE2EF200098C173 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4A41C1FE2EF200098C173 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFE4A3FB1FE2EF200098C173 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE4A4051FE2EF200098C173 /* ViewController.swift in Sources */,
+				FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4A40F1FE2EF200098C173 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE4A4181FE2EF200098C173 /* capisceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFE4A41A1FE2EF200098C173 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFE4A4231FE2EF200098C173 /* capisceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFE4A4151FE2EF200098C173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE4A3FE1FE2EF200098C173 /* capisce */;
+			targetProxy = FFE4A4141FE2EF200098C173 /* PBXContainerItemProxy */;
+		};
+		FFE4A4201FE2EF200098C173 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE4A3FE1FE2EF200098C173 /* capisce */;
+			targetProxy = FFE4A41F1FE2EF200098C173 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FFE4A4061FE2EF200098C173 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFE4A4071FE2EF200098C173 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFE4A40C1FE2EF200098C173 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFE4A4251FE2EF200098C173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFE4A4261FE2EF200098C173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFE4A4281FE2EF200098C173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = capisce/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFE4A4291FE2EF200098C173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = capisce/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisce;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FFE4A42B1FE2EF200098C173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = capisceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/capisce.app/capisce";
+			};
+			name = Debug;
+		};
+		FFE4A42C1FE2EF200098C173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = capisceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/capisce.app/capisce";
+			};
+			name = Release;
+		};
+		FFE4A42E1FE2EF200098C173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = capisceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = capisce;
+			};
+			name = Debug;
+		};
+		FFE4A42F1FE2EF200098C173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = capisceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = capisce;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFE4A3FA1FE2EF1F0098C173 /* Build configuration list for PBXProject "capisce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE4A4251FE2EF200098C173 /* Debug */,
+				FFE4A4261FE2EF200098C173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE4A4271FE2EF200098C173 /* Build configuration list for PBXNativeTarget "capisce" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE4A4281FE2EF200098C173 /* Debug */,
+				FFE4A4291FE2EF200098C173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE4A42A1FE2EF200098C173 /* Build configuration list for PBXNativeTarget "capisceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE4A42B1FE2EF200098C173 /* Debug */,
+				FFE4A42C1FE2EF200098C173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE4A42D1FE2EF200098C173 /* Build configuration list for PBXNativeTarget "capisceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE4A42E1FE2EF200098C173 /* Debug */,
+				FFE4A42F1FE2EF200098C173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFE4A3F71FE2EF1F0098C173 /* Project object */;
+}
