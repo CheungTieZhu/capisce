@@ -11,9 +11,8 @@ target ‘capisce’ do
   # Pods for carryonex
 
   pod 'Unbox', '2.5.0'
-  pod 'Alamofire', '4.5.1'
+  pod 'Alamofire'
   pod 'AlamofireImage'
-  pod 'M13Checkbox', '3.1.1'
   pod 'SMSSDK', '3.0.1'
   pod 'ALCameraViewController'
 

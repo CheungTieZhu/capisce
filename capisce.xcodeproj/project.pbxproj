@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		81233F2102B1CA1A9158F1C3 /* Pods_capisce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6DC66D6E650C4CC5A52108 /* Pods_capisce.framework */; };
+		FF3FA0FF1FE325B800A38CF5 /* Apiservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FA0FE1FE325B800A38CF5 /* Apiservers.swift */; };
+		FF3FA1021FE32A3600A38CF5 /* Date++.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FA1011FE32A3600A38CF5 /* Date++.swift */; };
+		FF3FA1041FE32AED00A38CF5 /* UserDefaults++.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FA1031FE32AED00A38CF5 /* UserDefaults++.swift */; };
 		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
 		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
 		FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */; };
@@ -40,6 +43,9 @@
 		146C42CA4AC05AD9F42D6CAE /* Pods-capisce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capisce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-capisce/Pods-capisce.debug.xcconfig"; sourceTree = "<group>"; };
 		499D9E16641010610C496F5D /* Pods-capisce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-capisce.release.xcconfig"; path = "Pods/Target Support Files/Pods-capisce/Pods-capisce.release.xcconfig"; sourceTree = "<group>"; };
 		BE6DC66D6E650C4CC5A52108 /* Pods_capisce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_capisce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3FA0FE1FE325B800A38CF5 /* Apiservers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apiservers.swift; sourceTree = "<group>"; };
+		FF3FA1011FE32A3600A38CF5 /* Date++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date++.swift"; sourceTree = "<group>"; };
+		FF3FA1031FE32AED00A38CF5 /* UserDefaults++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults++.swift"; sourceTree = "<group>"; };
 		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE4A4091FE2EF200098C173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +104,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FF3FA0FD1FE3258600A38CF5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FF3FA0FE1FE325B800A38CF5 /* Apiservers.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FF3FA1001FE329CD00A38CF5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FF3FA1011FE32A3600A38CF5 /* Date++.swift */,
+				FF3FA1031FE32AED00A38CF5 /* UserDefaults++.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		FFE4A3F61FE2EF1F0098C173 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +144,8 @@
 		FFE4A4011FE2EF200098C173 /* capisce */ = {
 			isa = PBXGroup;
 			children = (
+				FF3FA1001FE329CD00A38CF5 /* Extension */,
+				FF3FA0FD1FE3258600A38CF5 /* Manager */,
 				FFE4A4321FE2F07C0098C173 /* StoryBoard */,
 				FFE4A4301FE2F0680098C173 /* Controller */,
 				FFE4A4021FE2EF200098C173 /* AppDelegate.swift */,
@@ -381,7 +406,10 @@
 			files = (
 				FFE4A4411FE2F6460098C173 /* MainTabController.swift in Sources */,
 				FFE4A4441FE2F9030098C173 /* LoginController.swift in Sources */,
+				FF3FA1041FE32AED00A38CF5 /* UserDefaults++.swift in Sources */,
+				FF3FA1021FE32A3600A38CF5 /* Date++.swift in Sources */,
 				FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */,
+				FF3FA0FF1FE325B800A38CF5 /* Apiservers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

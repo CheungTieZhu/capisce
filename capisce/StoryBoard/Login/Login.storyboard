@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJn-4t-UuF">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,7 @@
             <objects>
                 <navigationController id="hJn-4t-UuF" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VJE-yR-9k8">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -31,12 +32,75 @@
             <objects>
                 <viewController id="iMZ-4Z-Egw" customClass="LoginController" customModule="capisce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vcJ-qV-wsn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.48055821659999998" green="0.98284262420000001" blue="0.9232034683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pa-aL-Tcg" customClass="TextField" customModule="Material">
+                                <rect key="frame" x="64.5" y="307.5" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaK-nG-l9w">
+                                <rect key="frame" x="0.0" y="64" width="320" height="113.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capisce" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAW-cg-1SI">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="AAW-cg-1SI" firstAttribute="centerX" secondItem="kaK-nG-l9w" secondAttribute="centerX" id="Bik-hl-HeA"/>
+                                    <constraint firstItem="AAW-cg-1SI" firstAttribute="height" secondItem="kaK-nG-l9w" secondAttribute="height" id="OvT-rW-6cJ"/>
+                                    <constraint firstItem="AAW-cg-1SI" firstAttribute="width" secondItem="kaK-nG-l9w" secondAttribute="width" id="TKK-RU-69d"/>
+                                    <constraint firstItem="AAW-cg-1SI" firstAttribute="centerY" secondItem="kaK-nG-l9w" secondAttribute="centerY" id="Xj8-gt-0hp"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Asb-M3-Uta" customClass="TextField" customModule="Material">
+                                <rect key="frame" x="64.5" y="227.5" width="192" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXN-aF-sa9" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="64" y="387.5" width="192" height="48"/>
+                                <color key="backgroundColor" red="0.91146636010000004" green="0.56066635211185689" blue="0.54582253221242671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" red="0.99599462750000001" green="0.99628561739999999" blue="0.98779278989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogInButtonTapped:" destination="iMZ-4Z-Egw" eventType="touchUpInside" id="ITa-b2-TmX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70576219273695595" green="0.90700354662942106" blue="0.91146636010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Asb-M3-Uta" firstAttribute="width" secondItem="AAW-cg-1SI" secondAttribute="width" multiplier="0.6" id="ATV-Ty-MBf"/>
+                            <constraint firstItem="6pa-aL-Tcg" firstAttribute="centerX" secondItem="Asb-M3-Uta" secondAttribute="centerX" id="BKW-dz-qQE"/>
+                            <constraint firstItem="cXN-aF-sa9" firstAttribute="width" secondItem="6pa-aL-Tcg" secondAttribute="width" id="MCt-yI-IZc"/>
+                            <constraint firstItem="6pa-aL-Tcg" firstAttribute="top" secondItem="Asb-M3-Uta" secondAttribute="bottom" constant="50" id="WZc-XG-6gE"/>
+                            <constraint firstItem="cXN-aF-sa9" firstAttribute="top" secondItem="6pa-aL-Tcg" secondAttribute="bottom" constant="50" id="X0b-ws-z3b"/>
+                            <constraint firstItem="kaK-nG-l9w" firstAttribute="width" secondItem="vcJ-qV-wsn" secondAttribute="width" id="Ywz-F1-cdc"/>
+                            <constraint firstItem="Asb-M3-Uta" firstAttribute="centerX" secondItem="AAW-cg-1SI" secondAttribute="centerX" id="cmf-na-8JG"/>
+                            <constraint firstItem="kaK-nG-l9w" firstAttribute="top" secondItem="eqs-jL-adP" secondAttribute="top" id="dmb-ug-haJ"/>
+                            <constraint firstItem="Asb-M3-Uta" firstAttribute="top" secondItem="AAW-cg-1SI" secondAttribute="bottom" constant="50" id="mbn-3V-Otb"/>
+                            <constraint firstItem="cXN-aF-sa9" firstAttribute="centerX" secondItem="6pa-aL-Tcg" secondAttribute="centerX" id="nX0-Pp-zZf"/>
+                            <constraint firstItem="kaK-nG-l9w" firstAttribute="height" secondItem="vcJ-qV-wsn" secondAttribute="height" multiplier="0.2" id="qwn-3J-uI0"/>
+                            <constraint firstItem="6pa-aL-Tcg" firstAttribute="width" secondItem="Asb-M3-Uta" secondAttribute="width" id="tjp-Lh-hyu"/>
+                            <constraint firstItem="eqs-jL-adP" firstAttribute="trailing" secondItem="kaK-nG-l9w" secondAttribute="trailing" id="xzR-ye-7Pw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eqs-jL-adP"/>
                     </view>
                     <navigationItem key="navigationItem" id="jm2-fB-EKU"/>
+                    <connections>
+                        <outlet property="loginButton" destination="cXN-aF-sa9" id="aVM-ol-lbP"/>
+                        <outlet property="passwordInput" destination="6pa-aL-Tcg" id="yhK-WQ-xse"/>
+                        <outlet property="userNameInput" destination="Asb-M3-Uta" id="74K-30-pEh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vPx-9a-GQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
