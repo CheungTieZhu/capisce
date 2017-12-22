@@ -44,11 +44,11 @@ class LoginController: UIViewController {
     
     @IBAction func LogInButtonTapped(_ sender: Any) {
         if let userName = userNameInput.text,let password = passwordInput.text {
-            Apiservers.shared.postLoginUser(userName: userName, password: password) { (msg, err) in
-                if err == nil {
+            UserProfileManage.shared.postLoginUser(userName: userName, password: password) { (userProfile, msg) in
+                if msg == "success" {
                     self.dismiss(animated: true, completion: nil)
                 }else{
-                    print(err)
+                    print("login failed")
                 }
             }
         }
