@@ -20,6 +20,10 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupNavigationBar()
     }
     
@@ -31,8 +35,6 @@ class LoginController: UIViewController {
     private func setupTextField(){
         userNameInput.placeholder  = "User name"
         passwordInput.placeholder = "Password"
-        userNameInput.detailLabel.text = "User name"
-        passwordInput.detailLabel.text = "Password"
         let userNameInputLeftView = UIImageView()
         userNameInputLeftView.image = Icon.settings
         let passwordInputLeftView = UIImageView()
@@ -52,6 +54,11 @@ class LoginController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    @IBAction func RegisterButtonTapped(_ sender: Any) {
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
