@@ -14,6 +14,8 @@
 		FF3FA0FF1FE325B800A38CF5 /* Apiservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FA0FE1FE325B800A38CF5 /* Apiservers.swift */; };
 		FF3FA1021FE32A3600A38CF5 /* Date++.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FA1011FE32A3600A38CF5 /* Date++.swift */; };
 		FF3FA1041FE32AED00A38CF5 /* UserDefaults++.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FA1031FE32AED00A38CF5 /* UserDefaults++.swift */; };
+		FF54C2DC1FEC948B00FDFA0D /* UserRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF54C2DB1FEC948B00FDFA0D /* UserRegister.storyboard */; };
+		FF54C2DE1FECA6A500FDFA0D /* UserRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54C2DD1FECA6A500FDFA0D /* UserRegisterController.swift */; };
 		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
 		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
 		FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */; };
@@ -52,6 +54,9 @@
 		FF3FA0FE1FE325B800A38CF5 /* Apiservers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apiservers.swift; sourceTree = "<group>"; };
 		FF3FA1011FE32A3600A38CF5 /* Date++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date++.swift"; sourceTree = "<group>"; };
 		FF3FA1031FE32AED00A38CF5 /* UserDefaults++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults++.swift"; sourceTree = "<group>"; };
+		FF54C2DB1FEC948B00FDFA0D /* UserRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserRegister.storyboard; sourceTree = "<group>"; };
+		FF54C2DD1FECA6A500FDFA0D /* UserRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterController.swift; sourceTree = "<group>"; };
+		FF54C2E01FECBA4100FDFA0D /* capisce-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "capisce-Bridging-Header.h"; sourceTree = "<group>"; };
 		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE4A4091FE2EF200098C173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +182,7 @@
 				FFE4A4091FE2EF200098C173 /* Assets.xcassets */,
 				FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */,
 				FFE4A40E1FE2EF200098C173 /* Info.plist */,
+				FF54C2E01FECBA4100FDFA0D /* capisce-Bridging-Header.h */,
 			);
 			path = capisce;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				FFE4A43E1FE2F1920098C173 /* Login.storyboard */,
+				FF54C2DB1FEC948B00FDFA0D /* UserRegister.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				FFE4A4431FE2F9030098C173 /* LoginController.swift */,
+				FF54C2DD1FECA6A500FDFA0D /* UserRegisterController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -357,6 +365,7 @@
 				FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */,
 				FFE4A43D1FE2F17C0098C173 /* MyInfo.storyboard in Resources */,
 				FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */,
+				FF54C2DC1FEC948B00FDFA0D /* UserRegister.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +447,7 @@
 				FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */,
 				FF2F5F4D1FEC3D120029B6A5 /* GlobalVariable.swift in Sources */,
 				FF3FA0FF1FE325B800A38CF5 /* Apiservers.swift in Sources */,
+				FF54C2DE1FECA6A500FDFA0D /* UserRegisterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +545,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "capisce/capisce-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -584,7 +597,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "capisce/capisce-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
