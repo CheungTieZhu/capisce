@@ -46,8 +46,9 @@ class LoginController: UIViewController {
     
     @IBAction func LogInButtonTapped(_ sender: Any) {
         if let userName = userNameInput.text,let password = passwordInput.text {
-            UserProfileManage.shared.postLoginUser(userName: userName, password: password) { (userProfile, msg) in
+            UserProfileManage.shared.postLoginUser(userName: userName, password: password) { (msg) in
                 if msg == "success" {
+                    justLogIn = true
                     self.dismiss(animated: true, completion: nil)
                 }else{
                     print("login failed")

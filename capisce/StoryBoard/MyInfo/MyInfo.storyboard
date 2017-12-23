@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,21 +30,77 @@
             </objects>
             <point key="canvasLocation" x="-365" y="24"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info Controller-->
         <scene sceneID="NXs-qU-eZT">
             <objects>
-                <viewController id="XWq-fl-Rzb" sceneMemberID="viewController">
+                <viewController id="XWq-fl-Rzb" customClass="UserInfoController" customModule="capisce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rzN-tH-1sO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.99366234519999996" green="1" blue="0.52735828740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIH-h0-cq7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="133.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello,Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sql-Xa-QLA">
+                                        <rect key="frame" x="153.5" y="42" width="196.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QFu-Ua-xJJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wae-iy-Lpl" customClass="Button" customModule="Material">
+                                        <rect key="frame" x="0.0" y="0.0" width="133.5" height="133.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wae-iy-Lpl" secondAttribute="height" id="fzT-jO-Etq"/>
+                                        </constraints>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f19-pI-g0Y" customClass="Button" customModule="Material">
+                                        <rect key="frame" x="291" y="102" width="59" height="25"/>
+                                        <color key="backgroundColor" red="0.91146636010000004" green="0.56066635210000004" blue="0.54582253219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleColor" red="0.99599462750000001" green="0.99628561739999999" blue="0.98779278989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logOutTapped:" destination="XWq-fl-Rzb" eventType="touchUpInside" id="dPW-KX-y3f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wae-iy-Lpl" firstAttribute="leading" secondItem="aIH-h0-cq7" secondAttribute="leading" id="7lX-cZ-Hqe"/>
+                                    <constraint firstItem="f19-pI-g0Y" firstAttribute="height" secondItem="Sql-Xa-QLA" secondAttribute="height" multiplier="0.5" id="AnC-Xl-ezD"/>
+                                    <constraint firstItem="wae-iy-Lpl" firstAttribute="height" secondItem="aIH-h0-cq7" secondAttribute="height" id="Bfl-SY-oxq"/>
+                                    <constraint firstItem="f19-pI-g0Y" firstAttribute="width" secondItem="Sql-Xa-QLA" secondAttribute="width" multiplier="0.3" id="Bvw-3x-l20"/>
+                                    <constraint firstItem="Sql-Xa-QLA" firstAttribute="leading" secondItem="wae-iy-Lpl" secondAttribute="trailing" constant="20" id="OPs-1f-yIW"/>
+                                    <constraint firstItem="f19-pI-g0Y" firstAttribute="top" secondItem="Sql-Xa-QLA" secondAttribute="bottom" constant="10" id="WAL-PS-DfO"/>
+                                    <constraint firstItem="Sql-Xa-QLA" firstAttribute="centerY" secondItem="aIH-h0-cq7" secondAttribute="centerY" id="XBV-OV-38Z"/>
+                                    <constraint firstItem="wae-iy-Lpl" firstAttribute="top" secondItem="aIH-h0-cq7" secondAttribute="top" id="gFr-CJ-gHP"/>
+                                    <constraint firstItem="f19-pI-g0Y" firstAttribute="trailing" secondItem="Sql-Xa-QLA" secondAttribute="trailing" id="lk8-IO-J8J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70576219269999996" green="0.90700354660000004" blue="0.91146636010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aIH-h0-cq7" firstAttribute="top" secondItem="tyq-ad-bDY" secondAttribute="top" id="3UL-GE-M7P"/>
+                            <constraint firstItem="aIH-h0-cq7" firstAttribute="height" secondItem="rzN-tH-1sO" secondAttribute="height" multiplier="0.2" id="Jwm-TB-mM7"/>
+                            <constraint firstItem="aIH-h0-cq7" firstAttribute="width" secondItem="rzN-tH-1sO" secondAttribute="width" id="ZSC-EZ-Wo3"/>
+                            <constraint firstItem="tyq-ad-bDY" firstAttribute="trailing" secondItem="aIH-h0-cq7" secondAttribute="trailing" id="ipj-mn-sxe"/>
+                            <constraint firstItem="aIH-h0-cq7" firstAttribute="leading" secondItem="tyq-ad-bDY" secondAttribute="leading" id="s3B-mA-r6c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tyq-ad-bDY"/>
                     </view>
                     <navigationItem key="navigationItem" id="l9A-sF-gjI"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="Sql-Xa-QLA" id="Hep-Y0-fqZ"/>
+                        <outlet property="logOutButton" destination="f19-pI-g0Y" id="DA5-fg-jyn"/>
+                        <outlet property="userHeadImgButton" destination="wae-iy-Lpl" id="Jgc-ZY-dRX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmm-nw-uqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="396" y="24"/>
+            <point key="canvasLocation" x="396" y="23.838080959520241"/>
         </scene>
     </scenes>
 </document>
