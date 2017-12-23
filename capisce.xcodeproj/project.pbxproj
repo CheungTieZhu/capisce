@@ -16,6 +16,7 @@
 		FF3FA1041FE32AED00A38CF5 /* UserDefaults++.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FA1031FE32AED00A38CF5 /* UserDefaults++.swift */; };
 		FF54C2DC1FEC948B00FDFA0D /* UserRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF54C2DB1FEC948B00FDFA0D /* UserRegister.storyboard */; };
 		FF54C2DE1FECA6A500FDFA0D /* UserRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54C2DD1FECA6A500FDFA0D /* UserRegisterController.swift */; };
+		FF54C2E21FED805A00FDFA0D /* UIViewController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54C2E11FED805A00FDFA0D /* UIViewController++.swift */; };
 		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
 		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
 		FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */; };
@@ -57,6 +58,7 @@
 		FF54C2DB1FEC948B00FDFA0D /* UserRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserRegister.storyboard; sourceTree = "<group>"; };
 		FF54C2DD1FECA6A500FDFA0D /* UserRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterController.swift; sourceTree = "<group>"; };
 		FF54C2E01FECBA4100FDFA0D /* capisce-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "capisce-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF54C2E11FED805A00FDFA0D /* UIViewController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController++.swift"; sourceTree = "<group>"; };
 		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE4A4091FE2EF200098C173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				FF3FA1011FE32A3600A38CF5 /* Date++.swift */,
 				FF3FA1031FE32AED00A38CF5 /* UserDefaults++.swift */,
 				FF2F5F4C1FEC3D120029B6A5 /* GlobalVariable.swift */,
+				FF54C2E11FED805A00FDFA0D /* UIViewController++.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				FFE4A4441FE2F9030098C173 /* LoginController.swift in Sources */,
 				FF3FA1041FE32AED00A38CF5 /* UserDefaults++.swift in Sources */,
 				FF2F5F4B1FEC3B470029B6A5 /* UserProfileManage.swift in Sources */,
+				FF54C2E21FED805A00FDFA0D /* UIViewController++.swift in Sources */,
 				FF3FA1021FE32A3600A38CF5 /* Date++.swift in Sources */,
 				FF2F5F501FEC3E220029B6A5 /* User.swift in Sources */,
 				FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */,
