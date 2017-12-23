@@ -10,6 +10,7 @@ import Foundation
 
 let usernameKey = "capisce.user-default.key.username"
 let deviceTokenKey = "capisce.user-default.key.device-token"
+let userTokenKey = "capisce.user-default.key.userToken"
 
 extension UserDefaults {
     
@@ -35,6 +36,20 @@ extension UserDefaults {
     static func setDeviceToken(_ token: String) {
         UserDefaults.standard.set(token, forKey: deviceTokenKey)
         UserDefaults.standard.synchronize()
+    }
+    
+    //UserToken
+    static func setUserToken(_ userToken: String) {
+        UserDefaults.standard.set(userToken, forKey: userTokenKey)
+        UserDefaults.standard.synchronize()
+    }
+    
+    static func getUserToken() -> String? {
+        return UserDefaults.standard.string(forKey: userTokenKey)
+    }
+    
+    static func removeUserToken() {
+        UserDefaults.standard.removeObject(forKey: userTokenKey)
     }
 }
 

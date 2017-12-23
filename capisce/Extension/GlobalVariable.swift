@@ -14,10 +14,9 @@ enum ServerKey: String {
     case statusCode = "status_code"
     case message = "message"
     case appToken = "app_token"
-    case userToken = "user_token"
+    case userToken = "userToken"
     case userName  = "userName"
     case password  = "password"
-    case countryCode = "country_code"
     case phone     = "phone"
     case email     = "email"
     case timestamp = "timestamp"
@@ -36,3 +35,5 @@ enum ServerKey: String {
 let codeOfFlag : [String:String] = ["🇨🇳 +86":"86","🇺🇸  +1":"1", "🇭🇰 852":"852", "🇦🇺 +61":"61", "🇬🇧 +44":"44", "🇩🇪 +49":"49"]
 let Flag : [String:String] = ["🇨🇳 +86":"🇨🇳","🇺🇸  +1":"🇺🇸","🇭🇰 852":"🇭🇰", "🇦🇺 +61":"🇦🇺", "🇬🇧 +44":"🇬🇧", "🇩🇪 +49":"🇩🇪"]
 var flagsTitle : [String] = ["🇨🇳 +86","🇺🇸  +1","🇭🇰 852", "🇦🇺 +61", "🇬🇧 +44", "🇩🇪 +49"]
+//get user Info
+var justLogIn: Bool = false
