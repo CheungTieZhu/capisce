@@ -22,7 +22,7 @@ class MainTabController: UITabBarController{
                 if let userName = UserDefaults.getUsername(),let userToken = UserDefaults.getUserToken(){
                     UserProfileManage.shared.getUserInfo(userName: userName, userToken: userToken, completion: {(msg) in
                         if msg == "success"{
-
+                            self.getCompanyInfo(userName: userName, userToken: userToken)
                         }else{
                             self.showLogin()
                         }
@@ -32,6 +32,15 @@ class MainTabController: UITabBarController{
                 justLogIn = false
             }
         }
+    }
+    private func getCompanyInfo(userName: String,userToken: String){
+        CompanyManage.shared.getCompanyInfo(userName: userName, userToken: userToken, completion: { (msg) in
+            if msg == "success"{
+                print("get user information successed")
+            }else{
+                print("get Company information failed")
+            }
+        })
     }
     
     func showLogin(){

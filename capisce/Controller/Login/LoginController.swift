@@ -48,12 +48,24 @@ class LoginController: UIViewController {
         if let userName = userNameInput.text,let password = passwordInput.text {
             UserProfileManage.shared.postLoginUser(userName: userName, password: password) { (msg) in
                 if msg == "success" {
+                    self.getCompanyInformation()
+                }else{
+                    print("login failed")
+                }
+            }
+        }
+    }
+    
+    private func getCompanyInformation(){
+        if let userName = UserDefaults.getUsername(),let userToken = UserDefaults.getUserToken(){
+            CompanyManage.shared.getCompanyInfo(userName: userName, userToken: userToken, completion: { (msg) in
+                if msg == "success"{
                     justLogIn = true
                     self.dismiss(animated: true, completion: nil)
                 }else{
                     print("login failed")
                 }
-            }
+            })
         }
     }
     
