@@ -32,15 +32,15 @@ class UserOperationController: UITableViewController{
     }
     
     private func getUserLevel(){
-        if let userInfo = CompanyManage.shared.getCurrentCompany(){
-            if let userPosition = userInfo.level{
-                level = userPosition
-            }
+        if let parentVC = self.parent as? UserInfoController{
+            let companyIndex = parentVC.companyIndex
+            level = parentVC.companyDict?.company[companyIndex].level
         }
     }
 }
 extension UserOperationController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        getUserLevel()
         switch level {
         case 4?:
             return 8
@@ -59,8 +59,9 @@ extension UserOperationController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = userOperationTable.dequeueReusableCell(withIdentifier: "userOperationCellId", for: indexPath) as! UserOperationCell
-        if let companyInfo = CompanyManage.shared.getCurrentCompany(){
-            if let company = companyInfo.company,let apartment = companyInfo.apartment,let team = companyInfo.team,let position = level{
+        if let parentVC = self.parent as? UserInfoController{
+            let companyIndex = parentVC.companyIndex
+            if let company = parentVC.companyDict?.company[companyIndex].company,let apartment = parentVC.companyDict?.company[companyIndex].apartment,let team = parentVC.companyDict?.company[companyIndex].team,let position = level{
                 switch indexPath.row{
                 case 0:
                     cell.itemNameLabel.text = "company"
@@ -111,3 +112,4 @@ extension UserOperationController{
     }
     
 }
+

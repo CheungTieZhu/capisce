@@ -13,14 +13,22 @@ class UserInfoController: UIViewController {
     @IBOutlet weak var userHeadImgButton: Button!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var logOutButton: Button!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    @IBOutlet weak var companySelected: UICollectionView!
+    
+    var companyIndex:Int = 0
+    var companyDict: Company?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupInformation()
+        setupCompanyDict()
+    }
+    
+    private func setupCompanyDict(){
+        if let dictionary = CompanyManage.shared.getCurrentCompany(){
+            companyDict = dictionary
+            self.companySelected.reloadData()
+        }
     }
     
     private func setupInformation(){
@@ -42,5 +50,31 @@ class UserInfoController: UIViewController {
             })
         }
     }
-    
 }
+extension UserInfoController: UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let number = companyDict?.company.count{
+            return number
+        }else{
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = companySelected.dequeueReusableCell(withReuseIdentifier: "companyButtonCellId", for: indexPath) as! CompanyButtonCell
+        cell.buttonLabel.text = companyDict?.company[indexPath.row].company
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        companyIndex = indexPath.item
+        if let childVC = self.childViewControllers.first as? UserOperationController {
+            childVC.userOperationTable.reloadData()
+        }
+    }
+}
+

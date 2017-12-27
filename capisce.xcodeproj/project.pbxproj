@@ -17,11 +17,17 @@
 		FF54C2DC1FEC948B00FDFA0D /* UserRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF54C2DB1FEC948B00FDFA0D /* UserRegister.storyboard */; };
 		FF54C2DE1FECA6A500FDFA0D /* UserRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54C2DD1FECA6A500FDFA0D /* UserRegisterController.swift */; };
 		FF54C2E21FED805A00FDFA0D /* UIViewController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54C2E11FED805A00FDFA0D /* UIViewController++.swift */; };
+		FF964A831FF1818700B51A4C /* CompanyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF964A821FF1818700B51A4C /* CompanyDetail.swift */; };
+		FF964A851FF1ABA900B51A4C /* CompanyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF964A841FF1ABA900B51A4C /* CompanyStruct.swift */; };
+		FF964A871FF1C5F100B51A4C /* CompanyButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF964A861FF1C5F100B51A4C /* CompanyButtonCell.swift */; };
 		FFBBCF551FEE047B00099049 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBCF541FEE047B00099049 /* UserInfoController.swift */; };
 		FFBBCF571FEF2A0100099049 /* UserOperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBCF561FEF2A0100099049 /* UserOperationController.swift */; };
 		FFBBCF591FEF2A7100099049 /* UserOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBCF581FEF2A7100099049 /* UserOperationCell.swift */; };
 		FFBBCF5B1FEF2E1C00099049 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBCF5A1FEF2E1C00099049 /* Company.swift */; };
 		FFBBCF601FEF41D200099049 /* CompanyManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBCF5F1FEF41D200099049 /* CompanyManage.swift */; };
+		FFBBCF631FEF6D0F00099049 /* MemberShip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFBBCF621FEF6D0F00099049 /* MemberShip.storyboard */; };
+		FFBBCF651FEF70A700099049 /* SetUpCompany.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFBBCF641FEF70A700099049 /* SetUpCompany.storyboard */; };
+		FFBBCF6A1FF17B0F00099049 /* SetupCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBCF691FF17B0F00099049 /* SetupCompanyController.swift */; };
 		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
 		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
 		FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */; };
@@ -64,11 +70,17 @@
 		FF54C2DD1FECA6A500FDFA0D /* UserRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterController.swift; sourceTree = "<group>"; };
 		FF54C2E01FECBA4100FDFA0D /* capisce-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "capisce-Bridging-Header.h"; sourceTree = "<group>"; };
 		FF54C2E11FED805A00FDFA0D /* UIViewController++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController++.swift"; sourceTree = "<group>"; };
+		FF964A821FF1818700B51A4C /* CompanyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetail.swift; sourceTree = "<group>"; };
+		FF964A841FF1ABA900B51A4C /* CompanyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyStruct.swift; sourceTree = "<group>"; };
+		FF964A861FF1C5F100B51A4C /* CompanyButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyButtonCell.swift; sourceTree = "<group>"; };
 		FFBBCF541FEE047B00099049 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		FFBBCF561FEF2A0100099049 /* UserOperationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperationController.swift; sourceTree = "<group>"; };
 		FFBBCF581FEF2A7100099049 /* UserOperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOperationCell.swift; sourceTree = "<group>"; };
 		FFBBCF5A1FEF2E1C00099049 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		FFBBCF5F1FEF41D200099049 /* CompanyManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyManage.swift; sourceTree = "<group>"; };
+		FFBBCF621FEF6D0F00099049 /* MemberShip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemberShip.storyboard; sourceTree = "<group>"; };
+		FFBBCF641FEF70A700099049 /* SetUpCompany.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetUpCompany.storyboard; sourceTree = "<group>"; };
+		FFBBCF691FF17B0F00099049 /* SetupCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCompanyController.swift; sourceTree = "<group>"; };
 		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE4A4091FE2EF200098C173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +152,8 @@
 			children = (
 				FF2F5F4F1FEC3E220029B6A5 /* User.swift */,
 				FFBBCF5A1FEF2E1C00099049 /* Company.swift */,
+				FF964A821FF1818700B51A4C /* CompanyDetail.swift */,
+				FF964A841FF1ABA900B51A4C /* CompanyStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +185,7 @@
 				FFBBCF541FEE047B00099049 /* UserInfoController.swift */,
 				FFBBCF561FEF2A0100099049 /* UserOperationController.swift */,
 				FFBBCF581FEF2A7100099049 /* UserOperationCell.swift */,
+				FF964A861FF1C5F100B51A4C /* CompanyButtonCell.swift */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -181,6 +196,23 @@
 				FFBBCF5F1FEF41D200099049 /* CompanyManage.swift */,
 			);
 			path = CompanyRelate;
+			sourceTree = "<group>";
+		};
+		FFBBCF611FEF6CCE00099049 /* MemberShip */ = {
+			isa = PBXGroup;
+			children = (
+				FFBBCF621FEF6D0F00099049 /* MemberShip.storyboard */,
+				FFBBCF641FEF70A700099049 /* SetUpCompany.storyboard */,
+			);
+			path = MemberShip;
+			sourceTree = "<group>";
+		};
+		FFBBCF661FF17AB400099049 /* Membership */ = {
+			isa = PBXGroup;
+			children = (
+				FFBBCF691FF17B0F00099049 /* SetupCompanyController.swift */,
+			);
+			path = Membership;
 			sourceTree = "<group>";
 		};
 		FFE4A3F61FE2EF1F0098C173 = {
@@ -223,6 +255,7 @@
 		FFE4A4301FE2F0680098C173 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FFBBCF661FF17AB400099049 /* Membership */,
 				FFBBCF531FEE044800099049 /* UserInfo */,
 				FFE4A4421FE2F8E60098C173 /* Login */,
 				FFE4A4401FE2F6460098C173 /* MainTabController.swift */,
@@ -233,6 +266,7 @@
 		FFE4A4321FE2F07C0098C173 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				FFBBCF611FEF6CCE00099049 /* MemberShip */,
 				FFE4A4391FE2F14F0098C173 /* Login */,
 				FFE4A4381FE2F1450098C173 /* MyInfo */,
 				FFE4A4371FE2F1350098C173 /* MyTask */,
@@ -393,11 +427,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBBCF631FEF6D0F00099049 /* MemberShip.storyboard in Resources */,
 				FFE4A4351FE2F11D0098C173 /* Main.storyboard in Resources */,
 				FFE4A43B1FE2F1660098C173 /* MyTask.storyboard in Resources */,
 				FFE4A43F1FE2F1920098C173 /* Login.storyboard in Resources */,
 				FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */,
 				FFE4A43D1FE2F17C0098C173 /* MyInfo.storyboard in Resources */,
+				FFBBCF651FEF70A700099049 /* SetUpCompany.storyboard in Resources */,
 				FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */,
 				FF54C2DC1FEC948B00FDFA0D /* UserRegister.storyboard in Resources */,
 			);
@@ -477,8 +513,12 @@
 				FFE4A4411FE2F6460098C173 /* MainTabController.swift in Sources */,
 				FFE4A4441FE2F9030098C173 /* LoginController.swift in Sources */,
 				FF3FA1041FE32AED00A38CF5 /* UserDefaults++.swift in Sources */,
+				FF964A871FF1C5F100B51A4C /* CompanyButtonCell.swift in Sources */,
 				FF2F5F4B1FEC3B470029B6A5 /* UserProfileManage.swift in Sources */,
+				FFBBCF6A1FF17B0F00099049 /* SetupCompanyController.swift in Sources */,
 				FF54C2E21FED805A00FDFA0D /* UIViewController++.swift in Sources */,
+				FF964A851FF1ABA900B51A4C /* CompanyStruct.swift in Sources */,
+				FF964A831FF1818700B51A4C /* CompanyDetail.swift in Sources */,
 				FF3FA1021FE32A3600A38CF5 /* Date++.swift in Sources */,
 				FFBBCF5B1FEF2E1C00099049 /* Company.swift in Sources */,
 				FFBBCF551FEE047B00099049 /* UserInfoController.swift in Sources */,
