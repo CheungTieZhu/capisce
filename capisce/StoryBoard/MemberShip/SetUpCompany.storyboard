@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPh-e9-oIx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setup Company Controller-->
+        <scene sceneID="mj0-nS-9Yv">
+            <objects>
+                <viewController id="kPh-e9-oIx" customClass="SetupCompanyController" customModule="capisce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fq-2K-saW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nae-C2-FRg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hxg-ZH-xXA" customClass="Button" customModule="Material">
+                                <rect key="frame" x="10" y="205" width="112.5" height="112.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hxg-ZH-xXA" secondAttribute="height" multiplier="1:1" id="wo3-ZG-kJp"/>
+                                </constraints>
+                                <state key="normal" image="sns_icon_11.png"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZb-hv-9Mh" customClass="TextField" customModule="Material">
+                                <rect key="frame" x="152" y="285" width="192.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6fO-UO-YU0" customClass="TextView" customModule="Material">
+                                <rect key="frame" x="30" y="343" width="315" height="179"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuc-wL-D2G">
+                                <rect key="frame" x="30" y="552" width="315" height="50"/>
+                                <color key="backgroundColor" red="0.91146636010000004" green="0.56066635210000004" blue="0.54582253219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hh4-8l-xp9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.99599462750000001" green="0.99628561739999999" blue="0.98779278989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="kPh-e9-oIx" eventType="touchUpInside" id="UYe-Vv-RkY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwY-Hy-PKy" customClass="TextField" customModule="Material">
+                                <rect key="frame" x="152.5" y="205" width="192.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.48055821659999998" green="0.98284262420000001" blue="0.9232034683" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lgp-Np-RGC" firstAttribute="trailing" secondItem="nae-C2-FRg" secondAttribute="trailing" id="0TK-3e-erQ"/>
+                            <constraint firstItem="Iuc-wL-D2G" firstAttribute="width" secondItem="6fO-UO-YU0" secondAttribute="width" id="2rT-Wc-ZNN"/>
+                            <constraint firstItem="Hxg-ZH-xXA" firstAttribute="top" secondItem="nae-C2-FRg" secondAttribute="bottom" constant="5" id="8Ng-Qm-Vz9"/>
+                            <constraint firstItem="6fO-UO-YU0" firstAttribute="leading" secondItem="Lgp-Np-RGC" secondAttribute="leading" constant="30" id="GCW-HV-zuT"/>
+                            <constraint firstItem="Lgp-Np-RGC" firstAttribute="trailing" secondItem="6fO-UO-YU0" secondAttribute="trailing" constant="30" id="MMT-qZ-tHX"/>
+                            <constraint firstItem="TZb-hv-9Mh" firstAttribute="leading" secondItem="EwY-Hy-PKy" secondAttribute="leading" id="P4m-Gd-0dy"/>
+                            <constraint firstItem="6fO-UO-YU0" firstAttribute="top" secondItem="TZb-hv-9Mh" secondAttribute="bottom" constant="28" id="QyN-EA-UPa"/>
+                            <constraint firstItem="Iuc-wL-D2G" firstAttribute="centerX" secondItem="nae-C2-FRg" secondAttribute="centerX" id="SK2-6G-CMs"/>
+                            <constraint firstItem="TZb-hv-9Mh" firstAttribute="width" secondItem="EwY-Hy-PKy" secondAttribute="width" id="Wjl-ac-g8C"/>
+                            <constraint firstItem="Iuc-wL-D2G" firstAttribute="top" secondItem="6fO-UO-YU0" secondAttribute="bottom" constant="30" id="bCz-8t-nuh"/>
+                            <constraint firstItem="EwY-Hy-PKy" firstAttribute="top" secondItem="Hxg-ZH-xXA" secondAttribute="top" id="bMK-IS-LMU"/>
+                            <constraint firstItem="TZb-hv-9Mh" firstAttribute="top" secondItem="EwY-Hy-PKy" secondAttribute="bottom" constant="50" id="fcC-Pn-guR"/>
+                            <constraint firstItem="Hxg-ZH-xXA" firstAttribute="leading" secondItem="Lgp-Np-RGC" secondAttribute="leading" constant="10" id="gbS-nd-sWQ"/>
+                            <constraint firstItem="Lgp-Np-RGC" firstAttribute="top" secondItem="nae-C2-FRg" secondAttribute="top" constant="20" id="khi-uN-4lu"/>
+                            <constraint firstItem="nae-C2-FRg" firstAttribute="height" secondItem="7fq-2K-saW" secondAttribute="height" multiplier="0.3" id="lJr-Vu-GGf"/>
+                            <constraint firstItem="Hxg-ZH-xXA" firstAttribute="width" secondItem="7fq-2K-saW" secondAttribute="width" multiplier="0.3" id="n7R-Mu-Ive"/>
+                            <constraint firstItem="Lgp-Np-RGC" firstAttribute="trailing" secondItem="EwY-Hy-PKy" secondAttribute="trailing" constant="30" id="nO8-VK-iFg"/>
+                            <constraint firstItem="nae-C2-FRg" firstAttribute="leading" secondItem="Lgp-Np-RGC" secondAttribute="leading" id="s2F-Gf-3ZE"/>
+                            <constraint firstItem="EwY-Hy-PKy" firstAttribute="leading" secondItem="Hxg-ZH-xXA" secondAttribute="trailing" constant="30" id="w0u-M9-VbJ"/>
+                            <constraint firstItem="Lgp-Np-RGC" firstAttribute="bottom" secondItem="Iuc-wL-D2G" secondAttribute="bottom" constant="65" id="x6l-lq-MbD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lgp-Np-RGC"/>
+                    </view>
+                    <connections>
+                        <outlet property="companyBusinessTextField" destination="TZb-hv-9Mh" id="DEy-w7-uXf"/>
+                        <outlet property="companyDescription" destination="6fO-UO-YU0" id="zTk-bm-jEQ"/>
+                        <outlet property="companyIconButton" destination="Hxg-ZH-xXA" id="Tpp-Hu-qHo"/>
+                        <outlet property="companyNameTextField" destination="EwY-Hy-PKy" id="Cp3-MK-peX"/>
+                        <outlet property="saveButton" destination="Iuc-wL-D2G" id="cq4-9y-XXG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zdd-qd-wJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.40000000000001" y="109.29535232383809"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sns_icon_11.png" width="58" height="58"/>
+    </resources>
+</document>

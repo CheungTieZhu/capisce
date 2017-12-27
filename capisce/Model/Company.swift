@@ -10,36 +10,15 @@ import Foundation
 import Unbox
 
 enum CompanyServerKey: String {
-    case company     = "company"
-    case apartment   = "apartment"
-    case team        = "team"
-    case level       = "level"
+    case company = "company"
 }
 
-class Company: Unboxable  {
-    
-    var company: String?
-    var apartment: String?
-    var team: String?
-    var level: Int?
-    init() {
-        //Initialization
-    }
-    
-    func printAllData(){
-        let allData = """
-        company = \(company ?? "")
-        apartment = \(apartment ?? "")
-        team = \(team ?? "")
-        level = \(level ?? 0),
-        """
-        print(allData)
-    }
-    
-    required init(unboxer: Unboxer) throws {
-        self.company = try? unboxer.unbox(key: CompanyServerKey.company.rawValue)
-        self.apartment = try? unboxer.unbox(key: CompanyServerKey.apartment.rawValue)
-        self.team = try? unboxer.unbox(key: CompanyServerKey.team.rawValue)
-        self.level = try? unboxer.unbox(key: CompanyServerKey.level.rawValue)
+struct Company {
+    var company: [CompanyStruct]
+}
+
+extension Company: Unboxable {
+    init(unboxer: Unboxer) throws {
+        self.company = try unboxer.unbox(key: CompanyServerKey.company.rawValue)
     }
 }
