@@ -209,6 +209,8 @@
                     <connections>
                         <outlet property="userOperationTable" destination="bis-0C-rUH" id="dKz-cu-UCh"/>
                         <segue destination="R7R-Q5-Dtz" kind="show" identifier="viewTheCompanyDetail" id="y5p-FG-dWU"/>
+                        <segue destination="aYh-ea-rVr" kind="show" identifier="addDepartment" id="h6i-1f-7tI"/>
+                        <segue destination="zyU-Gf-Ywe" kind="show" identifier="addMember" id="4hm-OY-L6L"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1kb-tD-Fi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,7 +225,23 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brU-gg-hWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="-165"/>
+            <point key="canvasLocation" x="1935" y="-215"/>
+        </scene>
+        <!--AddDepartment-->
+        <scene sceneID="Lvb-fH-foV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddDepartment" id="aYh-ea-rVr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zM4-uS-VKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005" y="23"/>
+        </scene>
+        <!--AddMember-->
+        <scene sceneID="f8P-vU-ABh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddMember" id="zyU-Gf-Ywe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oot-Ih-w0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="137"/>
         </scene>
     </scenes>
 </document>

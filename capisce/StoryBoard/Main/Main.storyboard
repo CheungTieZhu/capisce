@@ -38,6 +38,7 @@
                         <segue destination="H9q-HQ-jlL" kind="relationship" relationship="viewControllers" id="Uiq-qC-yFv"/>
                         <segue destination="Ccf-yg-dif" kind="relationship" relationship="viewControllers" id="D9o-bS-OrD"/>
                         <segue destination="4yc-RF-Shc" kind="relationship" relationship="viewControllers" id="kmb-Xs-JlX"/>
+                        <segue destination="BGE-ZA-YtF" kind="relationship" relationship="viewControllers" id="kgP-kV-7Le"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guT-vl-fEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -53,6 +54,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ml0-az-5NZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002" y="-45"/>
+        </scene>
+        <!--MyNotification-->
+        <scene sceneID="0ZJ-ro-uu6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyNotification" id="BGE-ZA-YtF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="PlK-Q5-miq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcD-w8-sfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="211"/>
         </scene>
         <!--MemberShip-->
         <scene sceneID="S6d-Pi-6nE">
@@ -72,7 +83,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxF-Sd-gMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="137"/>
+            <point key="canvasLocation" x="990" y="81"/>
         </scene>
     </scenes>
 </document>

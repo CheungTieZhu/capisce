@@ -12,9 +12,14 @@ import Unbox
 class UserProfileManage: NSObject{
     static let shared = UserProfileManage()
     private var currentUser: User?
+    private var multipleUser: MultipleUser?
     
     func getCurrentUser() -> User? {
         return currentUser
+    }
+    
+    func getMultipleUser() -> MultipleUser? {
+        return multipleUser
     }
     
     func isLoggedIn() -> Bool {
@@ -72,6 +77,7 @@ class UserProfileManage: NSObject{
     func postRegisterUser(userName: String,
                           password: String,
                           phone: String,
+                          registerStatus: String,
                           completion: @escaping (String?, String?) -> Void){
         let deviceToken = UserDefaults.getDeviceToken() ?? ""
         let route = "/user/register"
@@ -137,6 +143,43 @@ class UserProfileManage: NSObject{
                             let profileInfo: User = try unbox(dictionary: data)
                             self.currentUser = profileInfo
                             self.currentUser?.printAllData()
+                            completion(msg)
+                        }catch{
+                            print("unbox failed")
+                            completion(msg)
+                        }
+                    }else{
+                        completion(msg)
+                    }
+                }else{
+                    completion(msg)
+                    print("user Log in fail")
+                }
+            }else{
+                completion("failed")
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
+    
+    func postOtherUserInfo(realName: String,completion: @escaping (String?) -> Void){
+        let route = "/user/getOther"
+        let parameters:[String: Any] = [
+            ServerKey.realName.rawValue: realName
+        ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                if msg == "success"{
+                    if let data = response[ServerKey.data.rawValue] as? [String: Any]{
+                        do{
+                            let userInfo: MultipleUser = try unbox(dictionary: data)
+                            self.multipleUser = userInfo
                             completion(msg)
                         }catch{
                             print("unbox failed")
