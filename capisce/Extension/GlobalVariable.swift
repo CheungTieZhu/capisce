@@ -24,7 +24,7 @@ enum ServerKey: String {
     case offset = "offset"
     case userType = "user_type"
     case deviceToken = "deviceToken"
-    case realName = "real_name"
+    case realName = "realName"
     case tripId = "trip_id"
     case userId = "user_id"
     case sinceTime = "since_time"

@@ -22,9 +22,27 @@ class UserOperationController: UITableViewController{
     var level: Int?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //查看公司介绍
         if segue.identifier == "viewTheCompanyDetail"{
             if let showInfoVC = segue.destination as? ShowCompanyInfoController{
                  if let parentVC = self.parent as? UserInfoController{
+                    showInfoVC.companyDictionary = parentVC.companyDict
+                    showInfoVC.index = parentVC.companyIndex
+                }
+            }
+        }
+        //添加部门
+        if segue.identifier == "addDepartment"{
+            if let showInfoVC = segue.destination as? AddDepartmentController{
+                if let parentVC = self.parent as? UserInfoController{
+                    showInfoVC.companyDictionary = parentVC.companyDict
+                    showInfoVC.index = parentVC.companyIndex
+                }
+            }
+        }
+        if segue.identifier == "addMember"{
+            if let showInfoVC = segue.destination as? AddMemberController{
+                if let parentVC = self.parent as? UserInfoController{
                     showInfoVC.companyDictionary = parentVC.companyDict
                     showInfoVC.index = parentVC.companyIndex
                 }
@@ -50,7 +68,7 @@ extension UserOperationController{
         getUserLevel()
         switch level {
         case 4?:
-            return 10
+            return 11
         case 3?:
             return 10
         case 2?:
@@ -111,6 +129,9 @@ extension UserOperationController{
                 case 9:
                     cell.itemNameLabel.text = "新增："
                     cell.itemExpressionLabel.text = "部门"
+                case 10:
+                    cell.itemNameLabel.text = "新增："
+                    cell.itemExpressionLabel.text = "成员"
                 default:
                     cell.itemNameLabel.text = "company"
                     cell.itemExpressionLabel.text = company
@@ -143,8 +164,10 @@ extension UserOperationController{
             performSegue(withIdentifier: "ManageMember", sender: nil)
         case 8:
             performSegue(withIdentifier: "addTeam", sender: nil)
-        case 7:
+        case 9:
             performSegue(withIdentifier: "addDepartment", sender: nil)
+        case 10:
+            performSegue(withIdentifier: "addMember", sender: nil)
         default:
             print("WTF")
         }

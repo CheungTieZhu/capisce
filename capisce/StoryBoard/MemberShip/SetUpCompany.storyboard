@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPh-e9-oIx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPh-e9-oIx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -29,7 +29,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Hxg-ZH-xXA" secondAttribute="height" multiplier="1:1" id="wo3-ZG-kJp"/>
                                 </constraints>
-                                <state key="normal" image="sns_icon_11.png"/>
+                                <state key="normal" image="cameraButton"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZb-hv-9Mh" customClass="TextField" customModule="Material">
                                 <rect key="frame" x="152" y="285" width="192.5" height="30"/>
@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="50" id="hh4-8l-xp9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="保存">
                                     <color key="titleColor" red="0.99599462750000001" green="0.99628561739999999" blue="0.98779278989999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -103,6 +103,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sns_icon_11.png" width="58" height="58"/>
+        <image name="cameraButton" width="80" height="80"/>
     </resources>
 </document>

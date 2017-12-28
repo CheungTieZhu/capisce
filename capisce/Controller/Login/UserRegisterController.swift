@@ -117,7 +117,7 @@ class UserRegisterController: UIViewController {
     
     private func verifySuccess(){
         if let userName = userNameTextField.text,let password = passwordTextField.text,let phone = phoneNumber{
-            UserProfileManage.shared.postRegisterUser(userName: userName, password: password, phone: countryCode+phone, completion: { (result, msg) in
+            UserProfileManage.shared.postRegisterUser(userName: userName, password: password, phone: countryCode+phone, registerStatus: "常规注册",completion: { (result, msg) in
                 if let success = result,let message = msg{
                     if success == "success"{
                         self.navigationController?.popToRootViewController(animated: true)

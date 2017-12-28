@@ -22,6 +22,14 @@
 		FF71F20C1FF403760073F490 /* CompanyDetailTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F20B1FF403760073F490 /* CompanyDetailTable.swift */; };
 		FF71F20F1FF46EFC0073F490 /* CompanyOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F20E1FF46EFC0073F490 /* CompanyOperationManager.swift */; };
 		FF71F2111FF48F9B0073F490 /* MembershipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F2101FF48F9B0073F490 /* MembershipController.swift */; };
+		FF71F2151FF49E440073F490 /* AddDepartment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF71F2141FF49E440073F490 /* AddDepartment.storyboard */; };
+		FF71F2171FF4A26E0073F490 /* AddDepartmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F2161FF4A26E0073F490 /* AddDepartmentController.swift */; };
+		FF71F21B1FF4A8C80073F490 /* AddMember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF71F21A1FF4A8C80073F490 /* AddMember.storyboard */; };
+		FF71F21D1FF4AA850073F490 /* AddMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F21C1FF4AA850073F490 /* AddMemberController.swift */; };
+		FF71F21F1FF4B3EF0073F490 /* SearchUserTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F21E1FF4B3EF0073F490 /* SearchUserTable.swift */; };
+		FF71F2211FF4B4C30073F490 /* MultipleUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F2201FF4B4C30073F490 /* MultipleUser.swift */; };
+		FF71F2251FF4B5E00073F490 /* OtherUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F2241FF4B5E00073F490 /* OtherUserInfo.swift */; };
+		FF71F2271FF4D2F70073F490 /* SearchUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71F2261FF4D2F70073F490 /* SearchUserCell.swift */; };
 		FF964A831FF1818700B51A4C /* CompanyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF964A821FF1818700B51A4C /* CompanyDetail.swift */; };
 		FF964A851FF1ABA900B51A4C /* CompanyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF964A841FF1ABA900B51A4C /* CompanyStruct.swift */; };
 		FF964A871FF1C5F100B51A4C /* CompanyButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF964A861FF1C5F100B51A4C /* CompanyButtonCell.swift */; };
@@ -33,6 +41,8 @@
 		FFBBCF631FEF6D0F00099049 /* MemberShip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFBBCF621FEF6D0F00099049 /* MemberShip.storyboard */; };
 		FFBBCF651FEF70A700099049 /* SetUpCompany.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFBBCF641FEF70A700099049 /* SetUpCompany.storyboard */; };
 		FFBBCF6A1FF17B0F00099049 /* SetupCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBBCF691FF17B0F00099049 /* SetupCompanyController.swift */; };
+		FFCD2C901FF5532D00E9B944 /* MyNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCD2C8F1FF5532D00E9B944 /* MyNotification.storyboard */; };
+		FFCD2C931FF5547700E9B944 /* MyNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD2C921FF5547700E9B944 /* MyNotificationController.swift */; };
 		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
 		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
 		FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A40B1FE2EF200098C173 /* LaunchScreen.storyboard */; };
@@ -80,6 +90,14 @@
 		FF71F20B1FF403760073F490 /* CompanyDetailTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailTable.swift; sourceTree = "<group>"; };
 		FF71F20E1FF46EFC0073F490 /* CompanyOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyOperationManager.swift; sourceTree = "<group>"; };
 		FF71F2101FF48F9B0073F490 /* MembershipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipController.swift; sourceTree = "<group>"; };
+		FF71F2141FF49E440073F490 /* AddDepartment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDepartment.storyboard; sourceTree = "<group>"; };
+		FF71F2161FF4A26E0073F490 /* AddDepartmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDepartmentController.swift; sourceTree = "<group>"; };
+		FF71F21A1FF4A8C80073F490 /* AddMember.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMember.storyboard; sourceTree = "<group>"; };
+		FF71F21C1FF4AA850073F490 /* AddMemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberController.swift; sourceTree = "<group>"; };
+		FF71F21E1FF4B3EF0073F490 /* SearchUserTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserTable.swift; sourceTree = "<group>"; };
+		FF71F2201FF4B4C30073F490 /* MultipleUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleUser.swift; sourceTree = "<group>"; };
+		FF71F2241FF4B5E00073F490 /* OtherUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserInfo.swift; sourceTree = "<group>"; };
+		FF71F2261FF4D2F70073F490 /* SearchUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserCell.swift; sourceTree = "<group>"; };
 		FF964A821FF1818700B51A4C /* CompanyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetail.swift; sourceTree = "<group>"; };
 		FF964A841FF1ABA900B51A4C /* CompanyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyStruct.swift; sourceTree = "<group>"; };
 		FF964A861FF1C5F100B51A4C /* CompanyButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyButtonCell.swift; sourceTree = "<group>"; };
@@ -91,6 +109,8 @@
 		FFBBCF621FEF6D0F00099049 /* MemberShip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemberShip.storyboard; sourceTree = "<group>"; };
 		FFBBCF641FEF70A700099049 /* SetUpCompany.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetUpCompany.storyboard; sourceTree = "<group>"; };
 		FFBBCF691FF17B0F00099049 /* SetupCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCompanyController.swift; sourceTree = "<group>"; };
+		FFCD2C8F1FF5532D00E9B944 /* MyNotification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyNotification.storyboard; sourceTree = "<group>"; };
+		FFCD2C921FF5547700E9B944 /* MyNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationController.swift; sourceTree = "<group>"; };
 		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE4A4091FE2EF200098C173 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +184,8 @@
 				FFBBCF5A1FEF2E1C00099049 /* Company.swift */,
 				FF964A821FF1818700B51A4C /* CompanyDetail.swift */,
 				FF964A841FF1ABA900B51A4C /* CompanyStruct.swift */,
+				FF71F2201FF4B4C30073F490 /* MultipleUser.swift */,
+				FF71F2241FF4B5E00073F490 /* OtherUserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +217,10 @@
 			children = (
 				FF71F2091FF401650073F490 /* ShowCompanyInfoController.swift */,
 				FF71F20B1FF403760073F490 /* CompanyDetailTable.swift */,
+				FF71F2161FF4A26E0073F490 /* AddDepartmentController.swift */,
+				FF71F21C1FF4AA850073F490 /* AddMemberController.swift */,
+				FF71F21E1FF4B3EF0073F490 /* SearchUserTable.swift */,
+				FF71F2261FF4D2F70073F490 /* SearchUserCell.swift */,
 			);
 			path = CompanyOperation;
 			sourceTree = "<group>";
@@ -245,6 +271,22 @@
 			path = Membership;
 			sourceTree = "<group>";
 		};
+		FFCD2C8E1FF552FF00E9B944 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				FFCD2C8F1FF5532D00E9B944 /* MyNotification.storyboard */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		FFCD2C911FF5541A00E9B944 /* MyNotification */ = {
+			isa = PBXGroup;
+			children = (
+				FFCD2C921FF5547700E9B944 /* MyNotificationController.swift */,
+			);
+			path = MyNotification;
+			sourceTree = "<group>";
+		};
 		FFE4A3F61FE2EF1F0098C173 = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +327,7 @@
 		FFE4A4301FE2F0680098C173 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FFCD2C911FF5541A00E9B944 /* MyNotification */,
 				FFBBCF661FF17AB400099049 /* Membership */,
 				FFBBCF531FEE044800099049 /* UserInfo */,
 				FFE4A4421FE2F8E60098C173 /* Login */,
@@ -296,6 +339,7 @@
 		FFE4A4321FE2F07C0098C173 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				FFCD2C8E1FF552FF00E9B944 /* Notification */,
 				FFBBCF611FEF6CCE00099049 /* MemberShip */,
 				FFE4A4391FE2F14F0098C173 /* Login */,
 				FFE4A4381FE2F1450098C173 /* MyInfo */,
@@ -326,6 +370,8 @@
 			children = (
 				FFE4A43C1FE2F17C0098C173 /* MyInfo.storyboard */,
 				FF71F2061FF3FC330073F490 /* ShowCompanyInfo.storyboard */,
+				FF71F2141FF49E440073F490 /* AddDepartment.storyboard */,
+				FF71F21A1FF4A8C80073F490 /* AddMember.storyboard */,
 			);
 			path = MyInfo;
 			sourceTree = "<group>";
@@ -460,14 +506,17 @@
 			files = (
 				FFBBCF631FEF6D0F00099049 /* MemberShip.storyboard in Resources */,
 				FF71F2071FF3FC330073F490 /* ShowCompanyInfo.storyboard in Resources */,
+				FFCD2C901FF5532D00E9B944 /* MyNotification.storyboard in Resources */,
 				FFE4A4351FE2F11D0098C173 /* Main.storyboard in Resources */,
 				FFE4A43B1FE2F1660098C173 /* MyTask.storyboard in Resources */,
+				FF71F21B1FF4A8C80073F490 /* AddMember.storyboard in Resources */,
 				FFE4A43F1FE2F1920098C173 /* Login.storyboard in Resources */,
 				FFE4A40D1FE2EF200098C173 /* LaunchScreen.storyboard in Resources */,
 				FFE4A43D1FE2F17C0098C173 /* MyInfo.storyboard in Resources */,
 				FFBBCF651FEF70A700099049 /* SetUpCompany.storyboard in Resources */,
 				FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */,
 				FF54C2DC1FEC948B00FDFA0D /* UserRegister.storyboard in Resources */,
+				FF71F2151FF49E440073F490 /* AddDepartment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,22 +589,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF71F2171FF4A26E0073F490 /* AddDepartmentController.swift in Sources */,
 				FFBBCF591FEF2A7100099049 /* UserOperationCell.swift in Sources */,
 				FF71F20C1FF403760073F490 /* CompanyDetailTable.swift in Sources */,
 				FFBBCF571FEF2A0100099049 /* UserOperationController.swift in Sources */,
+				FF71F2211FF4B4C30073F490 /* MultipleUser.swift in Sources */,
 				FFE4A4411FE2F6460098C173 /* MainTabController.swift in Sources */,
 				FFE4A4441FE2F9030098C173 /* LoginController.swift in Sources */,
 				FF3FA1041FE32AED00A38CF5 /* UserDefaults++.swift in Sources */,
 				FF964A871FF1C5F100B51A4C /* CompanyButtonCell.swift in Sources */,
+				FFCD2C931FF5547700E9B944 /* MyNotificationController.swift in Sources */,
 				FF2F5F4B1FEC3B470029B6A5 /* UserProfileManage.swift in Sources */,
 				FFBBCF6A1FF17B0F00099049 /* SetupCompanyController.swift in Sources */,
 				FF71F20A1FF401650073F490 /* ShowCompanyInfoController.swift in Sources */,
 				FF54C2E21FED805A00FDFA0D /* UIViewController++.swift in Sources */,
+				FF71F21F1FF4B3EF0073F490 /* SearchUserTable.swift in Sources */,
 				FF964A851FF1ABA900B51A4C /* CompanyStruct.swift in Sources */,
 				FF964A831FF1818700B51A4C /* CompanyDetail.swift in Sources */,
 				FF71F2111FF48F9B0073F490 /* MembershipController.swift in Sources */,
 				FF3FA1021FE32A3600A38CF5 /* Date++.swift in Sources */,
+				FF71F2251FF4B5E00073F490 /* OtherUserInfo.swift in Sources */,
 				FFBBCF5B1FEF2E1C00099049 /* Company.swift in Sources */,
+				FF71F2271FF4D2F70073F490 /* SearchUserCell.swift in Sources */,
+				FF71F21D1FF4AA850073F490 /* AddMemberController.swift in Sources */,
 				FFBBCF551FEE047B00099049 /* UserInfoController.swift in Sources */,
 				FF71F20F1FF46EFC0073F490 /* CompanyOperationManager.swift in Sources */,
 				FF2F5F501FEC3E220029B6A5 /* User.swift in Sources */,

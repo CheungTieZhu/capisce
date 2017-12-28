@@ -9,14 +9,16 @@ import Foundation
 import Unbox
 
 enum ProfileUserKey: String {
-    case userName    = "userName"
-    case realName    = "realName"
-    case id          = "id"
-    case phone       = "phone"
-    case loginTime   = "loginTime"
-    case logOutTime  = "logOutTime"
-    case deviceToken = "deviceToken"
-    case userToken   = "userToken"
+    case userName       = "userName"
+    case realName       = "realName"
+    case id             = "id"
+    case phone          = "phone"
+    case loginTime      = "loginTime"
+    case logOutTime     = "logOutTime"
+    case deviceToken    = "deviceToken"
+    case userToken      = "userToken"
+    case headImageUrl   = "headImageUrl"
+    case registerStatus = "registerStatus"
 }
 
 class User: Unboxable  {
@@ -29,6 +31,8 @@ class User: Unboxable  {
     var logOutTime: String?
     var deviceToken: String?
     var userToken: String?
+    var headImageUrl: String?
+    var registerStatus: String?
     init() {
         //Initialization
     }
@@ -42,7 +46,9 @@ class User: Unboxable  {
         loginTime = \(loginTime ?? "")
         logOutTime = \(logOutTime ?? "")
         deviceToken = \(deviceToken ?? "")
-        userToken = \(userToken ?? ""),
+        userToken = \(userToken ?? "")
+        headImageUrl = \(headImageUrl ?? "")
+        registerStatus = \(registerStatus ?? ""),
         """
         print(allData)
     }
@@ -56,5 +62,7 @@ class User: Unboxable  {
         self.logOutTime = try? unboxer.unbox(key: ProfileUserKey.logOutTime.rawValue)
         self.deviceToken = try? unboxer.unbox(key: ProfileUserKey.deviceToken.rawValue)
         self.userToken = try? unboxer.unbox(key: ProfileUserKey.userToken.rawValue)
+        self.headImageUrl = try? unboxer.unbox(key: ProfileUserKey.headImageUrl.rawValue)
+        self.registerStatus = try? unboxer.unbox(key: ProfileUserKey.registerStatus.rawValue)
     }
 }
