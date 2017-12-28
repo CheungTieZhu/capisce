@@ -50,30 +50,30 @@ class UserRegisterController: UIViewController {
     
     private func setupTextField(){
         // userName
-        userNameTextField.placeholder  = "User name"
+        userNameTextField.placeholder  = "用户名"
         let userNameInputLeftView = UIImageView()
         userNameInputLeftView.image = Icon.settings
         userNameTextField.leftView = userNameInputLeftView
         //countryCode
-        countryCodeTextField.placeholder  = "Code"
+        countryCodeTextField.placeholder  = "区号"
         let phoneTextFieldLeftView = UIImageView()
         phoneTextFieldLeftView.image = Icon.phone
         countryCodeTextField.leftView = phoneTextFieldLeftView
         countryCodeTextField.inputView = flagPicker
         // phone
-        phoneTextField.placeholder  = "Phone"
+        phoneTextField.placeholder  = "手机号"
         // message
-        messageTextField.placeholder  = "Message"
+        messageTextField.placeholder  = "验证码"
         let messageTextFieldLeftView = UIImageView()
         messageTextFieldLeftView.image = Icon.email
         messageTextField.leftView = messageTextFieldLeftView
         // password
-        passwordTextField.placeholder  = "Password"
+        passwordTextField.placeholder  = "密码"
         let passwordTextFieldLeftView = UIImageView()
         passwordTextFieldLeftView.image = Icon.settings
         passwordTextField.leftView = passwordTextFieldLeftView
         // confirm
-        confirmTextField.placeholder  = "Confirm"
+        confirmTextField.placeholder  = "再次确认"
         let confirmTextFieldLeftView = UIImageView()
         confirmTextFieldLeftView.image = Icon.settings
         confirmTextField.leftView = confirmTextFieldLeftView

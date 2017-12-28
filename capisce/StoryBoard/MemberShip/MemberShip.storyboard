@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Membership-->
+        <!--会员-->
         <scene sceneID="tm6-hy-b6J">
             <objects>
                 <navigationController navigationBarHidden="YES" id="9BX-dG-u18" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Membership" id="JBD-hS-qp0"/>
+                    <tabBarItem key="tabBarItem" title="会员" id="JBD-hS-qp0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RgC-7I-d5l">
                         <autoresizingMask key="autoresizingMask"/>

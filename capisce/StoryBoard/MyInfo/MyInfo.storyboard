@@ -12,11 +12,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My-->
+        <!--我-->
         <scene sceneID="wFw-OM-F7s">
             <objects>
                 <navigationController navigationBarHidden="YES" id="9Yf-sX-qRG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My" id="RGU-Hc-eyA"/>
+                    <tabBarItem key="tabBarItem" title="我" id="RGU-Hc-eyA"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H5D-Ap-XkS">
                         <autoresizingMask key="autoresizingMask"/>

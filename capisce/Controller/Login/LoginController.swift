@@ -33,8 +33,8 @@ class LoginController: UIViewController {
     }
     
     private func setupTextField(){
-        userNameInput.placeholder  = "User name"
-        passwordInput.placeholder = "Password"
+        userNameInput.placeholder  = "用户名"
+        passwordInput.placeholder = "密码"
         let userNameInputLeftView = UIImageView()
         userNameInputLeftView.image = Icon.settings
         let passwordInputLeftView = UIImageView()
