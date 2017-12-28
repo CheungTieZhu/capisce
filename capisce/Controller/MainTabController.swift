@@ -10,8 +10,16 @@ import UIKit
 
 class MainTabController: UITabBarController{
     var loginViewController: LoginController?
+    var myInfoCtl: UserInfoController?
     override func viewWillAppear(_ animated: Bool) {
         isItHaveLogin()
+        if let viewControllers = self.viewControllers as? [UINavigationController] {
+            for navigationController in viewControllers {
+                if let myInfoContoller = navigationController.childViewControllers[0] as? UserInfoController {
+                    myInfoCtl = myInfoContoller
+                }
+            }
+        }
     }
     
     private func isItHaveLogin(){

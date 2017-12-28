@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9BX-dG-u18">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9BX-dG-u18">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,11 +13,10 @@
         <!--Membership-->
         <scene sceneID="tm6-hy-b6J">
             <objects>
-                <navigationController id="9BX-dG-u18" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="9BX-dG-u18" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Membership" id="JBD-hS-qp0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RgC-7I-d5l">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -28,16 +27,16 @@
             </objects>
             <point key="canvasLocation" x="-630" y="-152"/>
         </scene>
-        <!--View Controller-->
+        <!--Membership Controller-->
         <scene sceneID="ZCv-5r-1Bx">
             <objects>
-                <viewController id="b16-Rq-1F5" sceneMemberID="viewController">
+                <viewController id="b16-Rq-1F5" customClass="MembershipController" customModule="capisce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MIZ-Sc-5UD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjt-Do-Gz3">
-                                <rect key="frame" x="132" y="326" width="111" height="30"/>
+                                <rect key="frame" x="132" y="304" width="111" height="30"/>
                                 <state key="normal" title="Set up company"/>
                                 <connections>
                                     <segue destination="0C6-cL-OnD" kind="show" id="wSB-V1-Wsb"/>

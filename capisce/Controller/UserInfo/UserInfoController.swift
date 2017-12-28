@@ -18,6 +18,12 @@ class UserInfoController: UIViewController {
     var companyIndex:Int = 0
     var companyDict: Company?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupInformation()
