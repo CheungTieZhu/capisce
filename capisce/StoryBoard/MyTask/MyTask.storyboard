@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Task-->
+        <!--任务-->
         <scene sceneID="mej-Zu-Yyo">
             <objects>
                 <navigationController navigationBarHidden="YES" id="7E5-6n-aQk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Task" id="UOf-mz-BSN"/>
+                    <tabBarItem key="tabBarItem" title="任务" id="UOf-mz-BSN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ane-6W-djQ">
                         <autoresizingMask key="autoresizingMask"/>
