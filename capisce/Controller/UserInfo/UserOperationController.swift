@@ -21,13 +21,20 @@ class UserOperationController: UITableViewController{
     @IBOutlet var userOperationTable: UITableView!
     var level: Int?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getUserLevel()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewTheCompanyDetail"{
+            if let showInfoVC = segue.destination as? ShowCompanyInfoController{
+                 if let parentVC = self.parent as? UserInfoController{
+                    showInfoVC.companyDictionary = parentVC.companyDict
+                    showInfoVC.index = parentVC.companyIndex
+                }
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        getUserLevel()
         userOperationTable.reloadData()
     }
     
@@ -109,6 +116,28 @@ extension UserOperationController{
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: "viewTheCompanyDetail", sender: nil)
+        case 1:
+            performSegue(withIdentifier: "viewTheApartmentDetail", sender: nil)
+        case 2:
+            performSegue(withIdentifier: "viewTheTeamDetail", sender: nil)
+        case 4:
+            performSegue(withIdentifier: "viewTheMemberDetail", sender: nil)
+        case 5:
+            performSegue(withIdentifier: "manageTheTask", sender: nil)
+        case 6:
+            performSegue(withIdentifier: "viewLocation", sender: nil)
+        case 7:
+            performSegue(withIdentifier: "ManageMember", sender: nil)
+        default:
+            print("WTF")
+        }
     }
     
 }

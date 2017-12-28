@@ -44,14 +44,24 @@ class SetupCompanyController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         if let currentUser = UserProfileManage.shared.getCurrentUser(){
-            if let userName = currentUser.userName,let company = companyNameTextField.text,let business = companyBusinessTextField.text,let description = companyDescription.text{
+            if let userName = currentUser.userName,let userToken = currentUser.userToken,let company = companyNameTextField.text,let business = companyBusinessTextField.text,let description = companyDescription.text{
                 CompanyManage.shared.createCompany(userName: userName, company: company, business: business, description: description, companyIcon: "0", completion: { (result, msg) in
                     if result == "success"{
-                        self.navigationController?.popToRootViewController(animated: true)
+                        self.getNewCompanyInfo(userName: userName,userToken: userToken)
                     }else{
                         self.displayGlobalAlert(title: "错误", message: msg!, action: "Ok", completion: nil)
                     }
                 })
+            }
+        }
+    }
+    
+    private func getNewCompanyInfo(userName: String,userToken: String){
+        CompanyManage.shared.getCompanyInfo(userName: userName, userToken: userToken) { (result) in
+            if result == "success"{
+                self.navigationController?.popToRootViewController(animated: true)
+            }else{
+                self.displayGlobalAlert(title: "错误", message: "get company information failed", action: "Ok", completion: nil)
             }
         }
     }
