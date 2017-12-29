@@ -12,6 +12,7 @@ import AlamofireImage
 class SearchUserTable: UITableViewController{
     
     @IBOutlet var userDisplayTable: UITableView!
+    var index: Int?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let parentVC = self.parent as? AddMemberController{
@@ -39,5 +40,11 @@ class SearchUserTable: UITableViewController{
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let parentVC = self.parent as? AddMemberController{
+            index = indexPath.row
+            parentVC.sendButton.isEnabled = true
+        }
     }
 }

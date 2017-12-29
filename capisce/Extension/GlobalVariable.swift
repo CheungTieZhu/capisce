@@ -37,3 +37,15 @@ let Flag : [String:String] = ["🇨🇳 +86":"🇨🇳","🇺🇸  +1":"🇺🇸
 var flagsTitle : [String] = ["🇨🇳 +86","🇺🇸  +1","🇭🇰 852", "🇦🇺 +61", "🇬🇧 +44", "🇩🇪 +49"]
 //get user Info
 var justLogIn: Bool = false
+
+enum requestStatus: String{
+    case addMember = "请求添加"
+    case kickOut = "移出组织"
+}
+
+enum requestAction: String{
+    case unread = "未读"
+    case readed = "已读"
+    case accepted = "已同意"
+    case rejected = "已拒绝"
+}
