@@ -20,6 +20,8 @@ enum NotificationInfoKey: String {
     case companyIcon     = "companyIcon"
     case note            = "note"
     case realName        = "realName"
+    case id              = "id"
+    case senderAccept    = "senderAccept"
 }
 
 struct Notification {
@@ -33,6 +35,8 @@ struct Notification {
     let companyIcon: String?
     let note: String?
     let realName: String?
+    let id :Int?
+    let senderAccept: Int?
 }
 
 extension Notification: Unboxable {
@@ -47,5 +51,7 @@ extension Notification: Unboxable {
         self.companyIcon = try? unboxer.unbox(key: NotificationInfoKey.companyIcon.rawValue)
         self.note  = try? unboxer.unbox(key: NotificationInfoKey.note.rawValue)
         self.realName  = try? unboxer.unbox(key: NotificationInfoKey.realName.rawValue)
+        self.id  = try? unboxer.unbox(key: NotificationInfoKey.id.rawValue)
+        self.senderAccept  = try? unboxer.unbox(key: NotificationInfoKey.senderAccept.rawValue)
     }
 }

@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Notification Controller-->
         <scene sceneID="Ol6-o3-6Po">
             <objects>
                 <tableViewController id="2SB-xI-qdh" customClass="MyNotificationController" customModule="capisce" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,14 +102,23 @@
                             <outlet property="delegate" destination="2SB-xI-qdh" id="eZa-n3-AIh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="BX7-wp-bxd"/>
+                    <navigationItem key="navigationItem" id="BX7-wp-bxd"/>
                     <connections>
                         <outlet property="NotificationTable" destination="2aL-0U-5zZ" id="Moy-hG-NDF"/>
+                        <segue destination="jA8-ha-RXC" kind="show" identifier="showNotificationDetail" id="GTj-WO-QoO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVK-vm-Iv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="656.79999999999995" y="89.505247376311857"/>
+        </scene>
+        <!--NotificationDetail-->
+        <scene sceneID="LlW-Z8-ja9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NotificationDetail" id="jA8-ha-RXC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UV-VS-r8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1281" y="89"/>
         </scene>
         <!--消息-->
         <scene sceneID="wf7-hK-P0K">

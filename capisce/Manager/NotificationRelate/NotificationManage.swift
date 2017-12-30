@@ -17,7 +17,7 @@ class NotificationManage: NSObject{
         return Notification
     }
     
-    func postSendNotification(company: String,userName: String,senderUserName: String,accept: Int,request: Int,userHeadImage: String,companyIcon: String,note: String,realName: String,completion: @escaping (String?) -> Void){
+    func postSendNotification(company: String,userName: String,senderUserName: String,accept: Int,senderAccept: Int,request: Int,userHeadImage: String,companyIcon: String,note: String,realName: String,completion: @escaping (String?) -> Void){
         let route = "/notification/send"
         let parameters:[String: Any] = [
             NotificationInfoKey.company.rawValue: company,
@@ -28,7 +28,8 @@ class NotificationManage: NSObject{
             NotificationInfoKey.userHeadImage.rawValue: userHeadImage,
             NotificationInfoKey.companyIcon.rawValue: companyIcon,
             NotificationInfoKey.note.rawValue: note,
-            NotificationInfoKey.realName.rawValue: realName
+            NotificationInfoKey.realName.rawValue: realName,
+            NotificationInfoKey.senderAccept.rawValue: senderAccept
         ]
         Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
             guard let response = response else {
@@ -38,11 +39,7 @@ class NotificationManage: NSObject{
                 return
             }
             if let msg = response[ServerKey.message.rawValue] as? String{
-                if msg == "success"{
-                        completion(msg)
-                    }else{
-                        completion(msg)
-                    }
+                completion(msg)
             }else{
                 completion("failed")
                 print("the user login failed because of the wrong value!")
@@ -87,5 +84,68 @@ class NotificationManage: NSObject{
             }
         }
     }
-        
+    func postUserLocalAction(id: Int,accept: Int,completion: @escaping (String?) -> Void){
+        let route = "/notification/userLocalAction"
+        let parameters:[String: Any] = [
+            NotificationInfoKey.id.rawValue: id,
+            NotificationInfoKey.accept.rawValue: accept
+        ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                completion(msg)
+            }else{
+                completion("failed")
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
+    func postUserGlobalAction(id: Int,accept: Int,senderAccept: Int,completion: @escaping (String?) -> Void){
+        let route = "/notification/userGlobalAction"
+        let parameters:[String: Any] = [
+            NotificationInfoKey.id.rawValue: id,
+            NotificationInfoKey.accept.rawValue: accept,
+            NotificationInfoKey.senderAccept.rawValue: senderAccept
+        ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                completion(msg)
+            }else{
+                completion("failed")
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
+    func postSenderIgnore(id: Int,senderAccept: Int,completion: @escaping (String?) -> Void){
+        let route = "/notification/senderIgnore"
+        let parameters:[String: Any] = [
+            NotificationInfoKey.id.rawValue: id,
+            NotificationInfoKey.senderAccept.rawValue: senderAccept
+        ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                completion(msg)
+            }else{
+                completion("failed")
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
 }
