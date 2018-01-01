@@ -39,25 +39,31 @@ class NotificationDetailController: UIViewController{
         setupButtonStatus()
     }
     
+    
     private func setupButtonStatus(){
         if let userName = notificationDictionary?.notification[index].userName,let current = UserProfileManage.shared.getCurrentUser(),let currUserName = current.userName,let action = notificationDictionary?.notification[index].accept{
             if userName != currUserName{
                 agreeButton.isEnabled = false
                 rejectButton.isEnabled = false
-            }
-            if action < 2{
-                agreeButton.isEnabled = true
-                rejectButton.isEnabled = true
             }else{
-                agreeButton.isEnabled = false
-                rejectButton.isEnabled = false
+                if action < 2{
+                    agreeButton.isEnabled = true
+                    rejectButton.isEnabled = true
+                }else{
+                    agreeButton.isEnabled = false
+                    rejectButton.isEnabled = false
+                }
             }
         }
     }
     
     private func setupBasicInfomation(){
+        companyIcon.layer.masksToBounds = true
+        companyIcon.layer.cornerRadius = CGFloat(Int(companyIcon.frame.width)/2)
         if let companyIconString = notificationDictionary?.notification[index].companyIcon,let imgUrl = URL(string:companyIconString){
             companyIcon.af_setImage(withURL: imgUrl)
+        }else{
+            companyIcon.image = #imageLiteral(resourceName: "capisce_company")
         }
         if let company = notificationDictionary?.notification[index].company{
             companyName.text = company
@@ -85,7 +91,15 @@ class NotificationDetailController: UIViewController{
         if let id = notificationDictionary?.notification[index].id{
             NotificationManage.shared.postUserGlobalAction(id: id, accept: 2, senderAccept: 2, completion: { (result) in
                 if result == "success"{
-                    self.displayGlobalAlert(title: "成功", message: "发送成功", action: "OK", completion: nil)
+                    if let company = self.notificationDictionary?.notification[self.index].company,let userName = self.notificationDictionary?.notification[self.index].userName,let realName = self.notificationDictionary?.notification[self.index].realName,let companyIcon = self.notificationDictionary?.notification[self.index].companyIcon{
+                        CompanyOperationManager.shared.postRegisterNewMember(company: company, userName: userName,realName: realName, companyIcon: companyIcon,completion: { (result) in
+                            if result == "success"{
+                                self.displayGlobalAlert(title: "成功", message: "发送成功", action: "OK", completion: nil)
+                            }else{
+                                self.displayGlobalAlert(title: "失败", message: "注册失败", action: "OK", completion: nil)
+                            }
+                        })
+                    }
                 }else{
                     self.displayGlobalAlert(title: "失败", message: "失败", action: "OK", completion: nil)
                 }

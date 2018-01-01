@@ -34,19 +34,39 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
         super.viewDidAppear(animated)
         setupInformation()
         setupCompanyDict()
+        userHeadImgButton.layer.masksToBounds = true
+        userHeadImgButton.layer.cornerRadius = CGFloat(Int(userHeadImgButton.frame.width)/2)
     }
     
     private func setupCompanyDict(){
-        if let dictionary = CompanyManage.shared.getCurrentCompany(){
-            companyDict = dictionary
-            self.companySelected.reloadData()
+        if let current = UserProfileManage.shared.getCurrentUser(),let userName = current.userName,let userToken = current.userToken{
+            getCompanyInfo(userName: userName,userToken: userToken)
+            if let dictionary = CompanyManage.shared.getCurrentCompany(){
+                companyDict = dictionary
+                self.companySelected.reloadData()
+            }
         }
+    }
+    
+    private func getCompanyInfo(userName: String,userToken: String){
+        CompanyManage.shared.getCompanyInfo(userName: userName, userToken: userToken, completion: { (msg) in
+            if msg == "success"{
+                print("get user information successed")
+            }else{
+                print("get Company information failed")
+            }
+        })
     }
     
     private func setupInformation(){
         if let userInfo = UserProfileManage.shared.getCurrentUser(){
             if let realName = userInfo.realName{
                 greetingLabel.text = "hello!"+realName
+                if let imageString = userInfo.headImageUrl,let imgUrl = URL(string: imageString){
+                userHeadImgButton.af_setImage(for: .normal, url: imgUrl)
+                }else{
+                    userHeadImgButton.setImage(#imageLiteral(resourceName: "userDefault"), for: .normal)
+                }
             }
         }
     }
@@ -101,12 +121,22 @@ extension UserInfoController: UICollectionViewDataSource,UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = companySelected.dequeueReusableCell(withReuseIdentifier: "companyButtonCellId", for: indexPath) as! CompanyButtonCell
         cell.buttonLabel.text = companyDict?.company[indexPath.row].company
+        cell.companyIcon.layer.masksToBounds = true
+        cell.companyIcon.layer.cornerRadius = CGFloat(Int(cell.companyIcon.frame.width)/2)
+        if let companyIconString = companyDict?.company[indexPath.row].companyIcon,let imgUrl = URL(string: companyIconString){
+            cell.companyIcon.af_setImage(withURL: imgUrl)
+        }else{
+            cell.companyIcon.image = #imageLiteral(resourceName: "capisce_company")
+        }
         return cell
+            
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         companyIndex = indexPath.item
         if let childVC = self.childViewControllers.first as? UserOperationController {
+            let cell = collectionView.cellForItem(at: indexPath)
+            cell?.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             childVC.userOperationTable.reloadData()
         }
     }

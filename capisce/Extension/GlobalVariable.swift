@@ -28,6 +28,7 @@ enum ServerKey: String {
     case tripId = "trip_id"
     case userId = "user_id"
     case sinceTime = "since_time"
+    case registerStatus = "registerStatus"
 }
 
 // if changes the key in this map, MUST change also in the flagsTitle array

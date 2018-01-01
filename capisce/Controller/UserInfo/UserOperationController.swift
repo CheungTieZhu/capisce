@@ -33,13 +33,25 @@ class UserOperationController: UITableViewController{
         }
         //添加部门
         if segue.identifier == "addDepartment"{
-            if let showInfoVC = segue.destination as? AddDepartmentController{
+            if let showInfoVC = segue.destination as? AddOrganizationController{
                 if let parentVC = self.parent as? UserInfoController{
+                    showInfoVC.request = 0
                     showInfoVC.companyDictionary = parentVC.companyDict
                     showInfoVC.index = parentVC.companyIndex
                 }
             }
         }
+        //添加小组
+        if segue.identifier == "addTeam"{
+            if let showInfoVC = segue.destination as? AddOrganizationController{
+                if let parentVC = self.parent as? UserInfoController{
+                    showInfoVC.request = 1
+                    showInfoVC.companyDictionary = parentVC.companyDict
+                    showInfoVC.index = parentVC.companyIndex
+                }
+            }
+        }
+        //添加成员
         if segue.identifier == "addMember"{
             if let showInfoVC = segue.destination as? AddMemberController{
                 if let parentVC = self.parent as? UserInfoController{
@@ -68,13 +80,13 @@ extension UserOperationController{
         getUserLevel()
         switch level {
         case 4?:
-            return 11
-        case 3?:
             return 10
-        case 2?:
+        case 3?:
             return 9
+        case 2?:
+            return 8
         case 1?:
-            return 7
+            return 6
         case 0?:
             return 5
         default:
@@ -84,20 +96,26 @@ extension UserOperationController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = userOperationTable.dequeueReusableCell(withIdentifier: "userOperationCellId", for: indexPath) as! UserOperationCell
+        cell.itemImage.layer.masksToBounds = true
+        cell.itemImage.layer.cornerRadius = CGFloat(Int(cell.itemImage.frame.width)/2)
         if let parentVC = self.parent as? UserInfoController{
             let companyIndex = parentVC.companyIndex
             if let company = parentVC.companyDict?.company[companyIndex].company,let apartment = parentVC.companyDict?.company[companyIndex].apartment,let team = parentVC.companyDict?.company[companyIndex].team,let position = level{
                 switch indexPath.row{
                 case 0:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_company")
                     cell.itemNameLabel.text = "公司："
                     cell.itemExpressionLabel.text = company
                 case 1:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_department")
                     cell.itemNameLabel.text = "部门："
                     cell.itemExpressionLabel.text = apartment
                 case 2:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_team")
                     cell.itemNameLabel.text = "小组："
                     cell.itemExpressionLabel.text = team
                 case 3:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_position")
                     cell.itemNameLabel.text = "职位："
                     switch position{
                     case 4:
@@ -112,24 +130,27 @@ extension UserOperationController{
                         cell.itemExpressionLabel.text = userPosition.teamMember.rawValue
                     }
                 case 4:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_view")
                     cell.itemNameLabel.text = "查看："
                     cell.itemExpressionLabel.text = "成员"
                 case 5:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_manage")
                     cell.itemNameLabel.text = "管理："
                     cell.itemExpressionLabel.text = "任务"
                 case 6:
-                    cell.itemNameLabel.text = "查看："
-                    cell.itemExpressionLabel.text = "成员位置"
-                case 7:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_manage_member")
                     cell.itemNameLabel.text = "管理："
                     cell.itemExpressionLabel.text = "成员"
-                case 8:
+                case 7:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_add_department")
                     cell.itemNameLabel.text = "新增："
                     cell.itemExpressionLabel.text = "小组"
-                case 9:
+                case 8:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_add_team")
                     cell.itemNameLabel.text = "新增："
                     cell.itemExpressionLabel.text = "部门"
-                case 10:
+                case 9:
+                    cell.itemImage.image = #imageLiteral(resourceName: "capisce_add_menber")
                     cell.itemNameLabel.text = "新增："
                     cell.itemExpressionLabel.text = "成员"
                 default:
@@ -159,14 +180,12 @@ extension UserOperationController{
         case 5:
             performSegue(withIdentifier: "manageTheTask", sender: nil)
         case 6:
-            performSegue(withIdentifier: "viewLocation", sender: nil)
-        case 7:
             performSegue(withIdentifier: "ManageMember", sender: nil)
-        case 8:
+        case 7:
             performSegue(withIdentifier: "addTeam", sender: nil)
-        case 9:
+        case 8:
             performSegue(withIdentifier: "addDepartment", sender: nil)
-        case 10:
+        case 9:
             performSegue(withIdentifier: "addMember", sender: nil)
         default:
             print("WTF")

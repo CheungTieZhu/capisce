@@ -10,4 +10,5 @@ import UIKit
 
 class CompanyButtonCell: UICollectionViewCell{
     @IBOutlet weak var buttonLabel: UILabel!
+    @IBOutlet weak var companyIcon: UIImageView!
 }

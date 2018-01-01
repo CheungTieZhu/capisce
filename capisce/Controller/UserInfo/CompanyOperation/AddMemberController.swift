@@ -68,9 +68,9 @@ class AddMemberController: UIViewController{
     }
     
     @IBAction func searchUserEndEdit(_ sender: Any) {
-        if let realName = searchUser.text{
+        if let realName = searchUser.text,let currentUser = UserProfileManage.shared.getCurrentUser(),let userName = currentUser.userName{
             realNameDisplay = realName
-            UserProfileManage.shared.postOtherUserInfo(realName: realName, completion: { (result) in
+            UserProfileManage.shared.postOtherUserInfo(realName: realName,userName: userName,completion: { (result) in
                 if result == "success"{
                     if let multipleUser = UserProfileManage.shared.getMultipleUser(){
                         self.userInfoDictionary = multipleUser

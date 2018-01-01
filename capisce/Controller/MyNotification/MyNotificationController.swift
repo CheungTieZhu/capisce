@@ -56,12 +56,21 @@ class MyNotificationController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = NotificationTable.dequeueReusableCell(withIdentifier: "notificationCellId", for: indexPath) as! NotificationCell
+        cell.showImage.layer.masksToBounds = true
+        cell.showImage.layer.cornerRadius = CGFloat(Float(cell.showImage.frame.width)/2)
+        cell.notificationImage.layer.masksToBounds = true
+        cell.notificationImage.layer.cornerRadius = CGFloat(Float(cell.notificationImage.frame.width)/2)
         if let userName = notificationDictionary?.notification[indexPath.row].userName,let currentUser = UserProfileManage.shared.getCurrentUser(),let currentUserName = currentUser.userName,let action = notificationDictionary?.notification[indexPath.row].accept,let senderAction = notificationDictionary?.notification[indexPath.row].senderAccept{
             if currentUserName == userName{
-                if let company = notificationDictionary?.notification[indexPath.row].company,let companyIcon = notificationDictionary?.notification[indexPath.row].companyIcon,let request = notificationDictionary?.notification[indexPath.row].request,let imgUrl = URL(string: companyIcon){
+                if let company = notificationDictionary?.notification[indexPath.row].company,let request = notificationDictionary?.notification[indexPath.row].request{
+                    if let companyIcon = notificationDictionary?.notification[indexPath.row].companyIcon,let imgUrl = URL(string: companyIcon){
+                        cell.showImage.af_setImage(withURL: imgUrl)
+                    }else{
+                        cell.showImage.image = #imageLiteral(resourceName: "capisce_company")
+                    }
                     cell.showRoleLabel.text = "公司:"
                     cell.showLabel.text = company
-                    cell.showImage.af_setImage(withURL: imgUrl)
+                    
                     switch request{
                     case 0:
                     cell.requestLabel.text = requestStatus.addMember.rawValue
@@ -88,10 +97,14 @@ class MyNotificationController: UITableViewController{
                     }
                 }
             }else{
-                if let realName = notificationDictionary?.notification[indexPath.row].realName,let userHeadImage = notificationDictionary?.notification[indexPath.row].userHeadImage,let imgUrl = URL(string: userHeadImage),let request = notificationDictionary?.notification[indexPath.row].request{
+                if let realName = notificationDictionary?.notification[indexPath.row].realName,let request = notificationDictionary?.notification[indexPath.row].request{
                     cell.showRoleLabel.text = "用户:"
                     cell.showLabel.text = realName
-                    cell.showImage.af_setImage(withURL: imgUrl)
+                    if let userHeadImage = notificationDictionary?.notification[indexPath.row].userHeadImage,let imgUrl = URL(string: userHeadImage){
+                        cell.showImage.af_setImage(withURL: imgUrl)
+                    }else{
+                        cell.showImage.image = #imageLiteral(resourceName: "userDefault")
+                    }
                     switch request{
                     case 0:
                         cell.requestLabel.text = requestStatus.addMember.rawValue
@@ -123,7 +136,7 @@ class MyNotificationController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 120
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
