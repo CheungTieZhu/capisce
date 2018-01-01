@@ -12,6 +12,11 @@ import Unbox
 class CompanyOperationManager: NSObject{
     static let shared = CompanyOperationManager()
     private var currentCompanyDetail: CompanyDetail?
+    private var multipleUser: MultipleUser?
+    
+    func getMultipleUser() -> MultipleUser? {
+        return multipleUser
+    }
     
     func getCurrentCompany() -> CompanyDetail? {
         return currentCompanyDetail
@@ -54,5 +59,65 @@ class CompanyOperationManager: NSObject{
             }
         }
     }
-
+    func postRegisterNewMember(company: String,userName: String,realName: String,companyIcon: String,completion: @escaping (String?) -> Void){
+        let route = "/companyOperation/agree"
+        let parameters:[String: Any] = [
+            CompanyOrganizationKey.userName.rawValue: userName,
+            CompanyStructKey.company.rawValue: company,
+            CompanyOrganizationKey.realName.rawValue: realName,
+            CompanyStructKey.companyIcon.rawValue: companyIcon,
+        ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                completion(msg)
+            }else{
+                completion("failed")
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
+    
+    func postSearchPerson(realName: String,company: String,completion: @escaping (String?) -> Void){
+        let route = "/companyOperation/searchPerson"
+        let parameters:[String: Any] = [
+            CompanyOrganizationKey.realName.rawValue: realName,
+            CompanyStructKey.company.rawValue: company
+        ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                if msg == "success"{
+                    if let data = response[ServerKey.data.rawValue] as? [String: Any]{
+                        do{
+                            let userInfo: MultipleUser = try unbox(dictionary: data)
+                            self.multipleUser = userInfo
+                            completion(msg)
+                        }catch{
+                            print("unbox failed")
+                            completion(msg)
+                        }
+                    }else{
+                        completion(msg)
+                    }
+                }else{
+                    completion(msg)
+                    print("user Log in fail")
+                }
+            }else{
+                completion("failed")
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
 }

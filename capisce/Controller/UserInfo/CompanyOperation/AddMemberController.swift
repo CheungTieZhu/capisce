@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Material
 
 class AddMemberController: UIViewController{
     
@@ -14,9 +15,11 @@ class AddMemberController: UIViewController{
     
     @IBOutlet weak var companyIcon: UIImageView!
     
-    @IBOutlet weak var searchUser: UITextField!
+    @IBOutlet weak var searchUser: TextField!
     
     @IBOutlet weak var sendButton: UIButton!
+    
+    @IBOutlet weak var noteTextView: TextView!
     
     var companyDictionary: Company?
     
@@ -30,10 +33,16 @@ class AddMemberController: UIViewController{
         super.viewDidLoad()
         addDoneButtonOnKeyboard()
         setupCompanyLabel()
+        setupTextField()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    private func setupTextField(){
+        searchUser.placeholder  = "用户名称"
+        noteTextView.placeholder  = "备注"
     }
     
     private func setupCompanyLabel(){
@@ -50,16 +59,18 @@ class AddMemberController: UIViewController{
         doneToolbar.items = [flexSpace,done]
         doneToolbar.sizeToFit()
         self.searchUser.inputAccessoryView = doneToolbar
+        self.noteTextView.inputAccessoryView = doneToolbar
     }
     
     @objc func doneButtonAction(){
         searchUser.resignFirstResponder()
+        noteTextView.resignFirstResponder()
     }
     
     @IBAction func searchUserEndEdit(_ sender: Any) {
-        if let realName = searchUser.text{
+        if let realName = searchUser.text,let currentUser = UserProfileManage.shared.getCurrentUser(),let userName = currentUser.userName{
             realNameDisplay = realName
-            UserProfileManage.shared.postOtherUserInfo(realName: realName, completion: { (result) in
+            UserProfileManage.shared.postOtherUserInfo(realName: realName,userName: userName,completion: { (result) in
                 if result == "success"{
                     if let multipleUser = UserProfileManage.shared.getMultipleUser(){
                         self.userInfoDictionary = multipleUser
@@ -75,5 +86,16 @@ class AddMemberController: UIViewController{
     }
     
     @IBAction func sendButtonTapped(_ sender: Any) {
+        if let childVC = self.childViewControllers.first as? SearchUserTable,let userIndex = childVC.index,let currentUser = UserProfileManage.shared.getCurrentUser(),let company = companyDictionary?.company[index].company,let senderUserName = currentUser.userName,let companyIcon = companyDictionary?.company[index].companyIcon,let note = noteTextView.text,let realName = searchUser.text{
+            if let userName = userInfoDictionary?.multipleUser[userIndex].userName,let userHeadImage = userInfoDictionary?.multipleUser[userIndex].headImageUrl{
+                NotificationManage.shared.postSendNotification(company: company, userName: userName, senderUserName: senderUserName, accept: 0,senderAccept: 1, request: 0, userHeadImage: userHeadImage, companyIcon: companyIcon,note: note,realName: realName,completion: { (result) in
+                    if result == "success"{
+                        self.displayGlobalAlert(title: "成功", message: "已成功发送请求", action: "OK", completion: nil)
+                    }else{
+                        self.displayGlobalAlert(title: "错误", message: "错误", action: "OK", completion: nil)
+                    }
+                })
+            }
+        }
     }
 }

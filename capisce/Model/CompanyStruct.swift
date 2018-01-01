@@ -14,6 +14,7 @@ enum CompanyStructKey: String {
     case apartment   = "apartment"
     case team        = "team"
     case level       = "level"
+    case companyIcon = "companyIcon"
 }
 
 struct CompanyStruct {
@@ -21,6 +22,7 @@ struct CompanyStruct {
     let apartment: String?
     let team: String?
     let level: Int?
+    let companyIcon: String?
 }
 
 extension CompanyStruct: Unboxable {
@@ -29,6 +31,7 @@ extension CompanyStruct: Unboxable {
         self.apartment = try? unboxer.unbox(key: CompanyStructKey.apartment.rawValue)
         self.team = try? unboxer.unbox(key: CompanyStructKey.team.rawValue)
         self.level = try? unboxer.unbox(key: CompanyStructKey.level.rawValue)
+        self.companyIcon = try? unboxer.unbox(key: CompanyStructKey.companyIcon.rawValue)
     }
 }
 

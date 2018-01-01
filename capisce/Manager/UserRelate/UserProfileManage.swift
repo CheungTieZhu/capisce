@@ -85,7 +85,8 @@ class UserProfileManage: NSObject{
             ServerKey.userName.rawValue: userName,
             ServerKey.password.rawValue: password,
             ServerKey.phone.rawValue: phone,
-            ServerKey.deviceToken.rawValue: deviceToken
+            ServerKey.deviceToken.rawValue: deviceToken,
+            ServerKey.registerStatus.rawValue: registerStatus
         ]
         Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters){(response, error) in
             guard let response = response else {
@@ -162,10 +163,11 @@ class UserProfileManage: NSObject{
         }
     }
     
-    func postOtherUserInfo(realName: String,completion: @escaping (String?) -> Void){
+    func postOtherUserInfo(realName: String,userName: String,completion: @escaping (String?) -> Void){
         let route = "/user/getOther"
         let parameters:[String: Any] = [
-            ServerKey.realName.rawValue: realName
+            ServerKey.realName.rawValue: realName,
+            ServerKey.userName.rawValue: userName
         ]
         Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
             guard let response = response else {
