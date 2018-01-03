@@ -17,9 +17,10 @@ import Photos
 
 class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate{
     @IBOutlet weak var userHeadImgButton: Button!
-    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var realNameTextField: TextField!
     @IBOutlet weak var logOutButton: Button!
     @IBOutlet weak var companySelected: UICollectionView!
+    @IBOutlet weak var saveButton: Button!
     
     var companyIndex:Int = 0
     var companyDict: Company?
@@ -28,6 +29,22 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         navigationController?.navigationBar.isHidden = true
+        realNameTextField.placeholder = "用户昵称"
+        addDoneButtonOnKeyboard()
+    }
+    
+    private func addDoneButtonOnKeyboard(){
+        let doneToolbar: UIToolbar = UIToolbar(frame:CGRect(x:0,y:0,width:320,height:50))
+        doneToolbar.barStyle = UIBarStyle.blackTranslucent
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(doneButtonAction))
+        doneToolbar.items = [flexSpace,done]
+        doneToolbar.sizeToFit()
+        self.realNameTextField.inputAccessoryView = doneToolbar
+    }
+    
+    @objc func doneButtonAction(){
+        realNameTextField.resignFirstResponder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,7 +78,7 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
     private func setupInformation(){
         if let userInfo = UserProfileManage.shared.getCurrentUser(){
             if let realName = userInfo.realName{
-                greetingLabel.text = "hello!"+realName
+                realNameTextField.text = "hello!"+realName
                 if let imageString = userInfo.headImageUrl,let imgUrl = URL(string: imageString){
                 userHeadImgButton.af_setImage(for: .normal, url: imgUrl)
                 }else{
@@ -71,6 +88,19 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
         }
     }
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        if let current = UserProfileManage.shared.getCurrentUser(),let userName = current.userName,let realName = realNameTextField.text{
+            UserProfileManage.shared.getEditRealName(userName: userName, realName: realName, completion: { (result, msg) in
+                if let message = msg{
+                    if result == "success"{
+                        self.displayGlobalAlert(title: "成功", message: message, action: "OK", completion: nil)
+                    }else{
+                         self.displayGlobalAlert(title: "失败", message: message, action: "OK", completion: nil)
+                    }
+                }
+            })
+        }
+    }
     @IBAction func logOutTapped(_ sender: Any) {
         if let userName = UserDefaults.getUsername(){
             UserProfileManage.shared.getLogOutUser(userName: userName, completion: { (result, msg) in
@@ -156,7 +186,7 @@ extension UserInfoController{
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        var getImg : UIImage = #imageLiteral(resourceName: "libraryConfirm")
+        var getImg : UIImage = #imageLiteral(resourceName: "userDefault")
         if let editedImg = info[UIImagePickerControllerEditedImage] as? UIImage {
             getImg = editedImg
         }else if let originalImg = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -196,21 +226,30 @@ extension UserInfoController{
     
     func handleAwsServerImageUploadCompletion(_ error: Error?, _ awsUrl: URL?){
         if let err = error {
+            print(err)
             UIApplication.shared.endIgnoringInteractionEvents()
             let msg = "请检查您的网络设置或重新登陆，也可联系客服获取更多帮助，为此给您带来的不便我们深表歉意！出现错误：\(err)"
             self.displayGlobalAlert(title: "⛔️上传出错了", message: msg, action: "朕知道了", completion: nil)
         }
         if let publicUrl = awsUrl, publicUrl.absoluteString != "" {
             print("HomePageController++: uploadImage get publicUrl.absoluteStr = \(publicUrl.absoluteString)")
-//            ProfileManager.shared.updateUserInfo(.imageUrl, value: publicUrl.absoluteString, completion: { (success) in
-//                if success {
-//                    self.setupProfileImageFromAws()
-//                    self.removeImageWithUrlInLocalFileDirectory(fileName: ImageTypeOfID.profile.rawValue + ".JPG")
-//                    self.activityIndicator.isHidden = true
-//                    self.activityIndicator.stop()
-//                    UIApplication.shared.endIgnoringInteractionEvents()
-//                }
-//            })
+            if let current = UserProfileManage.shared.getCurrentUser(),let userName = current.userName{
+                UserProfileManage.shared.getUserHeadImage(userName: userName, headImgUrl: publicUrl.absoluteString, completion: { (result, msg) in
+                    if result == "success"{
+                        if let imgUrl = URL(string: publicUrl.absoluteString){
+                            let urlRequst = URLRequest.init(url: imgUrl)
+                            _ = UIImageView.af_sharedImageDownloader.imageCache?.removeImage(for: urlRequst, withIdentifier: nil)
+                            self.userHeadImgButton.af_setImage(for: .normal, url: imgUrl)
+                        }else{
+                            self.userHeadImgButton.setImage(#imageLiteral(resourceName: "userDefault"), for: .normal)
+                        }
+                    }else{
+                        if let message = msg{
+                            self.displayGlobalAlert(title: "成功", message: message, action: "ok", completion: nil)
+                        }
+                    }
+                })
+            }
         }else{
             print("errrorrr!!! uploadAllImagesToAws(): task.result is nil, !!!! did not upload")
         }

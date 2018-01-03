@@ -17,8 +17,8 @@ class AwsServerManager {
     
     private init(){
         // Configure AWS Cognito credentials:
-        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USWest2, identityPoolId: awsIdentityPoolId)
-        let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialsProvider)
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .APNortheast2, identityPoolId: awsIdentityPoolId)
+        let configuration = AWSServiceConfiguration(region: .APNortheast2, credentialsProvider: credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
     }
     
@@ -38,7 +38,7 @@ extension AwsServerManager {
             uploadRequest?.bucket = "\(awsPublicBucketName)/userProfileImages/\(userName)" // no / at the end of bucket
         } else {
             uploadRequest?.acl = .publicReadWrite
-            uploadRequest?.bucket = "\(awsPublicBucketName)/RequestPhotos/\(userName)" // no / at the end of bucket
+            uploadRequest?.bucket = "\(awsPublicBucketName)/companyIcon/\(userName)" // no / at the end of bucket
         }
         uploadRequest?.key = fileName // MUST NOT change this!!
         uploadRequest?.body = localUrl //imageUploadSequence[imgIdType]!!

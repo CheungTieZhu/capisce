@@ -37,9 +37,9 @@ let codeOfFlag : [String:String] = ["🇨🇳 +86":"86","🇺🇸  +1":"1", "�
 let Flag : [String:String] = ["🇨🇳 +86":"🇨🇳","🇺🇸  +1":"🇺🇸","🇭🇰 852":"🇭🇰", "🇦🇺 +61":"🇦🇺", "🇬🇧 +44":"🇬🇧", "🇩🇪 +49":"🇩🇪"]
 var flagsTitle : [String] = ["🇨🇳 +86","🇺🇸  +1","🇭🇰 852", "🇦🇺 +61", "🇬🇧 +44", "🇩🇪 +49"]
 /// AWS server keys
-let awsIdentityPoolId = "us-west-2:08a19db5-a7cc-4e82-b3e1-6d0898e6f2b7"
+let awsIdentityPoolId = "ap-northeast-2:a5682401-65bf-4fe4-b45c-01e4ab198789"
 let awsBucketName = "capiscepicture"
-let awsPublicBucketName = "capiscepublicimage"
+let awsPublicBucketName = "capiscepublic"
 //get user Info
 var justLogIn: Bool = false
 let imageCompress: CGFloat = 0.1

@@ -7,7 +7,13 @@
 //
 
 import Foundation
+import UIKit
 import Unbox
+
+public extension Notification.Name {
+    public static let UserLoggedOut = Notification.Name(rawValue: "com.capisce.user.logout")
+    public static let UserDidUpdate = Notification.Name(rawValue: "com.capisce.user.didUpdate")
+}
 
 class UserProfileManage: NSObject{
     static let shared = UserProfileManage()
@@ -197,6 +203,49 @@ class UserProfileManage: NSObject{
             }else{
                 completion("failed")
                 print("the user login failed because of the wrong value!")
+            }
+        }
+    }
+    func getUserHeadImage(userName: String,headImgUrl: String,completion: @escaping (String?,String?) -> Void){
+        let route = "/user/userHeadImgEdit"
+        let parameters:[String: Any] = [
+            ServerKey.userName.rawValue: userName,
+            OtherUserInfoKey.headImageUrl.rawValue: headImgUrl
+        ]
+        Apiservers.shared.getDataWithUrlRoute(route, parameters: parameters){(response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let result = response[ServerKey.result.rawValue] as? String,let msg = response[ServerKey.message.rawValue] as? String{
+                completion(result,msg)
+            }else{
+                completion(nil,"failed")
+                print("user Log in fail")
+            }
+        }
+    }
+    
+    func getEditRealName(userName: String,realName: String,completion: @escaping (String?,String?) -> Void){
+        let route = "/user/editUserRealName"
+        let parameters:[String: Any] = [
+            ServerKey.userName.rawValue: userName,
+            ServerKey.realName.rawValue: realName
+        ]
+        Apiservers.shared.getDataWithUrlRoute(route, parameters: parameters){(response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let result = response[ServerKey.result.rawValue] as? String,let msg = response[ServerKey.message.rawValue] as? String{
+                completion(result,msg)
+            }else{
+                completion(nil,"failed")
+                print("user Log in fail")
             }
         }
     }

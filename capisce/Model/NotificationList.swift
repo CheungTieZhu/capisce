@@ -14,7 +14,7 @@ enum NotificationListServerKey: String {
 }
 
 struct NotificationList {
-    var notification: [Notification]
+    var notification: [NotificationStruct]
 }
 
 extension NotificationList: Unboxable {
