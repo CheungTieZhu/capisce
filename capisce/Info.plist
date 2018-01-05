@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MOBAppSecret</key>
-	<string>ed255ca9e1b2790858d865c89ea43684</string>
-	<key>MOBAppkey</key>
-	<string>233b1600e4ac6</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -24,6 +20,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MOBAppSecret</key>
+	<string>ed255ca9e1b2790858d865c89ea43684</string>
+	<key>MOBAppkey</key>
+	<string>233b1600e4ac6</string>
+	<key>NSCameraUsageDescription</key>
+	<string>你可以用相机拍摄照片</string>
+	<key>NSContactsUsageDescription</key>
+	<string>你可以从手机通讯录邀请好友。</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>你可以从手机相册选择照片</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -35,8 +41,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

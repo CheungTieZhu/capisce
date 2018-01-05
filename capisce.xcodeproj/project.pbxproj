@@ -51,7 +51,7 @@
 		FFCD2C931FF5547700E9B944 /* MyNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD2C921FF5547700E9B944 /* MyNotificationController.swift */; };
 		FFCD2C961FF576F500E9B944 /* NotificationManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD2C951FF576F500E9B944 /* NotificationManage.swift */; };
 		FFCD2C981FF5774B00E9B944 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD2C971FF5774B00E9B944 /* NotificationList.swift */; };
-		FFCD2C9A1FF577AB00E9B944 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD2C991FF577AB00E9B944 /* Notification.swift */; };
+		FFCD2C9A1FF577AB00E9B944 /* NotificationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD2C991FF577AB00E9B944 /* NotificationStruct.swift */; };
 		FFCD2C9C1FF58B8B00E9B944 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD2C9B1FF58B8B00E9B944 /* NotificationCell.swift */; };
 		FFE4A4031FE2EF200098C173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4A4021FE2EF200098C173 /* AppDelegate.swift */; };
 		FFE4A40A1FE2EF200098C173 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE4A4091FE2EF200098C173 /* Assets.xcassets */; };
@@ -129,7 +129,7 @@
 		FFCD2C921FF5547700E9B944 /* MyNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotificationController.swift; sourceTree = "<group>"; };
 		FFCD2C951FF576F500E9B944 /* NotificationManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManage.swift; sourceTree = "<group>"; };
 		FFCD2C971FF5774B00E9B944 /* NotificationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationList.swift; sourceTree = "<group>"; };
-		FFCD2C991FF577AB00E9B944 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		FFCD2C991FF577AB00E9B944 /* NotificationStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStruct.swift; sourceTree = "<group>"; };
 		FFCD2C9B1FF58B8B00E9B944 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		FFE4A3FF1FE2EF200098C173 /* capisce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capisce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE4A4021FE2EF200098C173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 				FF71F2201FF4B4C30073F490 /* MultipleUser.swift */,
 				FF71F2241FF4B5E00073F490 /* OtherUserInfo.swift */,
 				FFCD2C971FF5774B00E9B944 /* NotificationList.swift */,
-				FFCD2C991FF577AB00E9B944 /* Notification.swift */,
+				FFCD2C991FF577AB00E9B944 /* NotificationStruct.swift */,
 				FFCB866E1FF745B600B5F110 /* CompanyOrganization.swift */,
 			);
 			path = Model;
@@ -662,7 +662,7 @@
 				FF71F20A1FF401650073F490 /* ShowCompanyInfoController.swift in Sources */,
 				FF54C2E21FED805A00FDFA0D /* UIViewController++.swift in Sources */,
 				FF71F21F1FF4B3EF0073F490 /* SearchUserTable.swift in Sources */,
-				FFCD2C9A1FF577AB00E9B944 /* Notification.swift in Sources */,
+				FFCD2C9A1FF577AB00E9B944 /* NotificationStruct.swift in Sources */,
 				FF964A851FF1ABA900B51A4C /* CompanyStruct.swift in Sources */,
 				FF964A831FF1818700B51A4C /* CompanyDetail.swift in Sources */,
 				FF71F2111FF48F9B0073F490 /* MembershipController.swift in Sources */,
@@ -847,6 +847,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW6FPHNY9L;
 				INFOPLIST_FILE = capisce/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisce;
@@ -862,6 +863,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FW6FPHNY9L;
 				INFOPLIST_FILE = capisce/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxb.capisce;

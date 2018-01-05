@@ -24,7 +24,7 @@ enum NotificationInfoKey: String {
     case senderAccept    = "senderAccept"
 }
 
-struct Notification {
+struct NotificationStruct {
     let userName: String?
     let senderUserName: String?
     let request: Int?
@@ -39,7 +39,7 @@ struct Notification {
     let senderAccept: Int?
 }
 
-extension Notification: Unboxable {
+extension NotificationStruct: Unboxable {
     init(unboxer: Unboxer) throws {
         self.userName = try? unboxer.unbox(key: NotificationInfoKey.userName.rawValue)
         self.senderUserName = try? unboxer.unbox(key: NotificationInfoKey.senderUserName.rawValue)

@@ -17,6 +17,11 @@ class MyNotificationController: UITableViewController{
     
     @IBOutlet var NotificationTable: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationTable.tableFooterView = UIView()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getNotificationInfo()

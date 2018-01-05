@@ -26,7 +26,7 @@ class CompanyOperationManager: NSObject{
         let parameters:[String: Any] = [
             CompanyServerKey.company.rawValue: company
         ]
-        Apiservers.shared.getDataWithUrlRoute(route, parameters: parameters){(response, error) in
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters){(response, error) in
             
             guard let response = response else {
                 if let error = error {
@@ -59,7 +59,7 @@ class CompanyOperationManager: NSObject{
             }
         }
     }
-    func postRegisterNewMember(company: String,userName: String,realName: String,companyIcon: String,completion: @escaping (String?) -> Void){
+    func postRegisterNewMember(company: String,userName: String,realName: String,companyIcon: String,headImageUrl: String,completion: @escaping (String?) -> Void){
         let route = "/companyOperation/agree"
         let parameters:[String: Any] = [
             CompanyOrganizationKey.userName.rawValue: userName,

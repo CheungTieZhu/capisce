@@ -14,6 +14,11 @@ class SearchUserTable: UITableViewController{
     @IBOutlet var userDisplayTable: UITableView!
     var index: Int?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userDisplayTable.tableFooterView = UIView()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let parentVC = self.parent as? AddMemberController{
             if let number = parentVC.userInfoDictionary?.multipleUser.count{

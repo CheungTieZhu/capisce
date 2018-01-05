@@ -64,7 +64,7 @@ class CompanyManage: NSObject{
             CompanyDetailServerKey.description.rawValue: description,
             CompanyDetailServerKey.companyIcon.rawValue: companyIcon
         ]
-        Apiservers.shared.getDataWithUrlRoute(route, parameters: parameters){(response, error) in
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters){(response, error) in
             guard let response = response else {
                 if let error = error {
                     print("getIsUserExisted response error: \(error.localizedDescription)")
