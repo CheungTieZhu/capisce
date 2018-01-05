@@ -31,7 +31,21 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
         navigationController?.navigationBar.isHidden = true
         realNameTextField.placeholder = "用户昵称"
         addDoneButtonOnKeyboard()
+        addObservers()
     }
+    
+    private func addObservers() {
+        
+        NotificationCenter.default.addObserver(forName: .UserDidUpdate, object: nil, queue: nil) { [weak self] _ in
+            self?.setupInformation()
+        }
+        
+        NotificationCenter.default.addObserver(forName: .UserLoggedOut, object: nil, queue: nil) { [weak self] _ in
+            self?.companyIndex = 0
+        }
+    }
+    
+    
     
     private func addDoneButtonOnKeyboard(){
         let doneToolbar: UIToolbar = UIToolbar(frame:CGRect(x:0,y:0,width:320,height:50))
@@ -61,6 +75,9 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
             if let dictionary = CompanyManage.shared.getCurrentCompany(){
                 companyDict = dictionary
                 self.companySelected.reloadData()
+                if let childVC = self.childViewControllers.first as? UserOperationController{
+                    childVC.userOperationTable.reloadData()
+                }
             }
         }
     }
@@ -78,7 +95,7 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
     private func setupInformation(){
         if let userInfo = UserProfileManage.shared.getCurrentUser(){
             if let realName = userInfo.realName{
-                realNameTextField.text = "hello!"+realName
+                realNameTextField.text = realName
                 if let imageString = userInfo.headImageUrl,let imgUrl = URL(string: imageString){
                 userHeadImgButton.af_setImage(for: .normal, url: imgUrl)
                 }else{
@@ -90,7 +107,7 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         if let current = UserProfileManage.shared.getCurrentUser(),let userName = current.userName,let realName = realNameTextField.text{
-            UserProfileManage.shared.getEditRealName(userName: userName, realName: realName, completion: { (result, msg) in
+            UserProfileManage.shared.postEditRealName(userName: userName, realName: realName, completion: { (result, msg) in
                 if let message = msg{
                     if result == "success"{
                         self.displayGlobalAlert(title: "成功", message: message, action: "OK", completion: nil)
@@ -156,7 +173,7 @@ extension UserInfoController: UICollectionViewDataSource,UICollectionViewDelegat
         if let companyIconString = companyDict?.company[indexPath.row].companyIcon,let imgUrl = URL(string: companyIconString){
             cell.companyIcon.af_setImage(withURL: imgUrl)
         }else{
-            cell.companyIcon.image = #imageLiteral(resourceName: "capisce_company")
+            cell.companyIcon.image = #imageLiteral(resourceName: "capisce_company_default")
         }
         return cell
             
@@ -164,9 +181,7 @@ extension UserInfoController: UICollectionViewDataSource,UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         companyIndex = indexPath.item
-        if let childVC = self.childViewControllers.first as? UserOperationController {
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        if let childVC = self.childViewControllers.first as? UserOperationController{
             childVC.userOperationTable.reloadData()
         }
     }
@@ -239,9 +254,6 @@ extension UserInfoController{
                         if let imgUrl = URL(string: publicUrl.absoluteString){
                             let urlRequst = URLRequest.init(url: imgUrl)
                             _ = UIImageView.af_sharedImageDownloader.imageCache?.removeImage(for: urlRequst, withIdentifier: nil)
-                            self.userHeadImgButton.af_setImage(for: .normal, url: imgUrl)
-                        }else{
-                            self.userHeadImgButton.setImage(#imageLiteral(resourceName: "userDefault"), for: .normal)
                         }
                     }else{
                         if let message = msg{

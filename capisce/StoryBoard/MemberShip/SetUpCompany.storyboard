@@ -29,7 +29,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Hxg-ZH-xXA" secondAttribute="height" multiplier="1:1" id="wo3-ZG-kJp"/>
                                 </constraints>
-                                <state key="normal" image="cameraButton"/>
+                                <state key="normal" image="capisce_company_default"/>
+                                <connections>
+                                    <action selector="companyIconTapped:" destination="kPh-e9-oIx" eventType="touchUpInside" id="qf5-2l-y0h"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZb-hv-9Mh" customClass="TextField" customModule="Material">
                                 <rect key="frame" x="152" y="285" width="192.5" height="30"/>
@@ -103,6 +106,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cameraButton" width="80" height="80"/>
+        <image name="capisce_company_default" width="256" height="256"/>
     </resources>
 </document>

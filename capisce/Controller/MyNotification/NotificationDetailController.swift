@@ -63,7 +63,7 @@ class NotificationDetailController: UIViewController{
         if let companyIconString = notificationDictionary?.notification[index].companyIcon,let imgUrl = URL(string:companyIconString){
             companyIcon.af_setImage(withURL: imgUrl)
         }else{
-            companyIcon.image = #imageLiteral(resourceName: "capisce_company")
+            companyIcon.image = #imageLiteral(resourceName: "capisce_company_default")
         }
         if let company = notificationDictionary?.notification[index].company{
             companyName.text = company
@@ -91,8 +91,8 @@ class NotificationDetailController: UIViewController{
         if let id = notificationDictionary?.notification[index].id{
             NotificationManage.shared.postUserGlobalAction(id: id, accept: 2, senderAccept: 2, completion: { (result) in
                 if result == "success"{
-                    if let company = self.notificationDictionary?.notification[self.index].company,let userName = self.notificationDictionary?.notification[self.index].userName,let realName = self.notificationDictionary?.notification[self.index].realName,let companyIcon = self.notificationDictionary?.notification[self.index].companyIcon{
-                        CompanyOperationManager.shared.postRegisterNewMember(company: company, userName: userName,realName: realName, companyIcon: companyIcon,completion: { (result) in
+                    if let company = self.notificationDictionary?.notification[self.index].company,let userName = self.notificationDictionary?.notification[self.index].userName,let realName = self.notificationDictionary?.notification[self.index].realName,let companyIcon = self.notificationDictionary?.notification[self.index].companyIcon,let headImageUrl = self.notificationDictionary?.notification[self.index].userHeadImage{
+                        CompanyOperationManager.shared.postRegisterNewMember(company: company, userName: userName,realName: realName, companyIcon: companyIcon,headImageUrl: headImageUrl,completion: { (result) in
                             if result == "success"{
                                 self.displayGlobalAlert(title: "成功", message: "发送成功", action: "OK", completion: nil)
                             }else{

@@ -79,7 +79,7 @@ class AddOrganizationController: UIViewController{
             if let companyIconString = companyDictionary?.company[index].companyIcon,let imgUrl = URL(string:companyIconString){
                 companyIcon.af_setImage(withURL: imgUrl)
             }else{
-                companyIcon.image = #imageLiteral(resourceName: "capisce_company")
+                companyIcon.image = #imageLiteral(resourceName: "capisce_company_default")
             }
             companyName.text = company
         }

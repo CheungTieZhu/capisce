@@ -12,6 +12,11 @@ class SearchPersonTable: UITableViewController{
     @IBOutlet var searchPersonTable: UITableView!
     var index: Int?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchPersonTable.tableFooterView = UIView()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let parentVC = self.parent as? AddOrganizationController{
             if let number = parentVC.userDictionary?.multipleUser.count{

@@ -60,12 +60,12 @@
                                             <action selector="logOutTapped:" destination="XWq-fl-Rzb" eventType="touchUpInside" id="dPW-KX-y3f"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3o-6P-rNw" customClass="Button" customModule="Material">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3o-6P-rNw" customClass="Button" customModule="Material">
                                         <rect key="frame" x="374" y="59" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="G3o-6P-rNw" secondAttribute="height" id="HH2-Dz-5pj"/>
                                         </constraints>
-                                        <state key="normal" title="B"/>
+                                        <state key="normal" image="capisce_edit"/>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="XWq-fl-Rzb" eventType="touchUpInside" id="zvz-6B-4wc"/>
                                         </connections>
@@ -305,6 +305,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="userDefault" width="159" height="158"/>
+        <image name="capisce_edit" width="200" height="198"/>
+        <image name="userDefault" width="256" height="256"/>
     </resources>
 </document>

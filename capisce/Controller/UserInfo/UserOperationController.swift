@@ -61,7 +61,10 @@ class UserOperationController: UITableViewController{
             }
         }
     }
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userOperationTable.tableFooterView = UIView()
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getUserLevel()
