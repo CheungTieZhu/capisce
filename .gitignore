@@ -48,6 +48,8 @@ playground.xcworkspace
 Pods/
 !Podfile
 Podfile.lock
+.idea/
+.DS_Store
 
 # Carthage
 #
