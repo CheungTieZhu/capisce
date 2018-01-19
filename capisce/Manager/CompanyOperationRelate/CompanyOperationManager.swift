@@ -59,6 +59,7 @@ class CompanyOperationManager: NSObject{
             }
         }
     }
+    
     func postRegisterNewMember(company: String,userName: String,realName: String,companyIcon: String,headImageUrl: String,completion: @escaping (String?) -> Void){
         let route = "/companyOperation/agree"
         let parameters:[String: Any] = [
@@ -120,4 +121,60 @@ class CompanyOperationManager: NSObject{
             }
         }
     }
+    
+    func postSetupOrganization(company: String,userName: String,note: String,department: String,organizationName: String,request: Int,completion: @escaping (String?) -> Void){
+        let route = "/companyOperation/addOrganization"
+        let parameters:[String: Any] = [
+            CompanyOrganizationKey.userName.rawValue: userName,
+            CompanyStructKey.company.rawValue: company,
+            ServerKey.department.rawValue: department,
+            ServerKey.request.rawValue: request,
+            ServerKey.organizationName.rawValue: organizationName
+            ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                completion(msg)
+            }else{
+                completion("failed")
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
+    
+    func postGetDepartment(company: String,completion: @escaping (String?,[String]) -> Void){
+        let route = "/companyOperation/getDepartment"
+        let parameters:[String: Any] = [
+            CompanyStructKey.company.rawValue: company
+        ]
+        Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("getIsUserExisted response error: \(error.localizedDescription)")
+                }
+                return
+            }
+            if let msg = response[ServerKey.message.rawValue] as? String{
+                if msg == "success"{
+                    if let data = response[ServerKey.data.rawValue] as? [String]{
+                            completion(msg,data)
+                    }else{
+                        completion(msg,[])
+                    }
+                }else{
+                    completion(msg,[])
+                    print("user Log in fail")
+                }
+            }else{
+                completion("failed",[])
+                print("the user login failed because of the wrong value!")
+            }
+        }
+    }
+    
 }

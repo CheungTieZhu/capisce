@@ -12,12 +12,14 @@ enum OtherUserInfoKey: String {
     case userName              = "userName"
     case headImageUrl          = "headImageUrl"
     case registerStatus        = "registerStatus"
+    case realName              = "realName"
 }
 
 struct OtherUserInfo {
     let userName: String?
     let headImageUrl: String?
     let registerStatus: String?
+    let realName: String?
 }
 
 extension OtherUserInfo: Unboxable {
@@ -25,5 +27,6 @@ extension OtherUserInfo: Unboxable {
         self.userName = try? unboxer.unbox(key: OtherUserInfoKey.userName.rawValue)
         self.headImageUrl = try? unboxer.unbox(key: OtherUserInfoKey.headImageUrl.rawValue)
         self.registerStatus = try? unboxer.unbox(key: OtherUserInfoKey.registerStatus.rawValue)
+        self.realName = try? unboxer.unbox(key: OtherUserInfoKey.realName.rawValue)
     }
 }
