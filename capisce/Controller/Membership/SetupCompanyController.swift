@@ -148,7 +148,11 @@ extension SetupCompanyController{
     func uploadImageToAws(getImg: UIImage){
         UIApplication.shared.beginIgnoringInteractionEvents()
         let localUrl = self.saveImageToDocumentDirectory(img: getImg, idType: .companyIcon)
-        let n = ImageTypeOfID.companyIcon.rawValue + ".JPG"
+        let date = Date()
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "yyy-MM-dd 'at' HH:mm:ss.SSS"
+        let strNowTime = timeFormatter.string(from: date) as String
+        let n = ImageTypeOfID.companyIcon.rawValue + strNowTime + ".JPG"
         AwsServerManager.shared.uploadFile(fileName: n, imgIdType: .userHeadImage, localUrl: localUrl, completion: { (err, awsUrl) in
             self.handleAwsServerImageUploadCompletion(err, awsUrl)
         })
