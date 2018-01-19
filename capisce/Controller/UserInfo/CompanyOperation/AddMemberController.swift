@@ -86,9 +86,9 @@ class AddMemberController: UIViewController{
     }
     
     @IBAction func sendButtonTapped(_ sender: Any) {
-        if let childVC = self.childViewControllers.first as? SearchUserTable,let userIndex = childVC.index,let currentUser = UserProfileManage.shared.getCurrentUser(),let company = companyDictionary?.company[index].company,let senderUserName = currentUser.userName,let companyIcon = companyDictionary?.company[index].companyIcon,let note = noteTextView.text{
+        if let childVC = self.childViewControllers.first as? SearchUserTable,let userIndex = childVC.index,let currentUser = UserProfileManage.shared.getCurrentUser(),let company = companyDictionary?.company[index].company,let senderUserName = currentUser.userName,let companyIcon = companyDictionary?.company[index].companyIcon,let note = noteTextView.text,let realName = searchUser.text{
             if let userName = userInfoDictionary?.multipleUser[userIndex].userName,let userHeadImage = userInfoDictionary?.multipleUser[userIndex].headImageUrl{
-                NotificationManage.shared.postSendNotification(company: company, userName: userName, senderUserName: senderUserName, accept: 0,senderAccept: 1, request: 0, userHeadImage: userHeadImage, companyIcon: companyIcon,note: note,completion: { (result) in
+                NotificationManage.shared.postSendNotification(company: company, userName: userName, senderUserName: senderUserName, accept: 0,senderAccept: 1, request: 0, userHeadImage: userHeadImage, companyIcon: companyIcon,note: note,realName: realName,completion: { (result) in
                     if result == "success"{
                         self.displayGlobalAlert(title: "成功", message: "已成功发送请求", action: "OK", completion: nil)
                     }else{

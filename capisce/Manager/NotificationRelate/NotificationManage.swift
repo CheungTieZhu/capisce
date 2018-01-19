@@ -17,7 +17,7 @@ class NotificationManage: NSObject{
         return Notification
     }
     
-    func postSendNotification(company: String,userName: String,senderUserName: String,accept: Int,senderAccept: Int,request: Int,userHeadImage: String,companyIcon: String,note: String,completion: @escaping (String?) -> Void){
+    func postSendNotification(company: String,userName: String,senderUserName: String,accept: Int,senderAccept: Int,request: Int,userHeadImage: String,companyIcon: String,note: String,realName: String,completion: @escaping (String?) -> Void){
         let route = "/notification/send"
         let parameters:[String: Any] = [
             NotificationInfoKey.company.rawValue: company,
@@ -28,6 +28,7 @@ class NotificationManage: NSObject{
             NotificationInfoKey.userHeadImage.rawValue: userHeadImage,
             NotificationInfoKey.companyIcon.rawValue: companyIcon,
             NotificationInfoKey.note.rawValue: note,
+            NotificationInfoKey.realName.rawValue: realName,
             NotificationInfoKey.senderAccept.rawValue: senderAccept
         ]
         Apiservers.shared.postDataWithUrlRoute(route, parameters: parameters) { (response, error) in

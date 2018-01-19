@@ -97,7 +97,7 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
             if let realName = userInfo.realName{
                 realNameTextField.text = realName
                 if let imageString = userInfo.headImageUrl,let imgUrl = URL(string: imageString){
-                    userHeadImgButton.af_setImage(for: .normal, url: imgUrl)
+                userHeadImgButton.af_setImage(for: .normal, url: imgUrl)
                 }else{
                     userHeadImgButton.setImage(#imageLiteral(resourceName: "userDefault"), for: .normal)
                 }
@@ -119,13 +119,11 @@ class UserInfoController: UIViewController,UINavigationControllerDelegate,UIImag
         }
     }
     @IBAction func logOutTapped(_ sender: Any) {
-        
         if let userName = UserDefaults.getUsername(){
             UserProfileManage.shared.getLogOutUser(userName: userName, completion: { (result, msg) in
                 if result == "success"{
                     UserDefaults.removeUsername()
                     UserDefaults.removeUserToken()
-                    UIImageView.af_sharedImageDownloader.imageCache?.removeAllImages()
                     AppDelegate.shared().mainTabViewController?.showLogin()
                 }
             })
@@ -234,11 +232,7 @@ extension UserInfoController{
     func uploadImageToAws(getImg: UIImage){
         UIApplication.shared.beginIgnoringInteractionEvents()
         let localUrl = self.saveImageToDocumentDirectory(img: getImg, idType: .userHeadImage)
-        let date = Date()
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "yyy-MM-dd 'at' HH:mm:ss.SSS"
-        let strNowTime = timeFormatter.string(from: date) as String
-        let n = ImageTypeOfID.userHeadImage.rawValue + strNowTime + ".JPG"
+        let n = ImageTypeOfID.userHeadImage.rawValue + ".JPG"
         AwsServerManager.shared.uploadFile(fileName: n, imgIdType: .userHeadImage, localUrl: localUrl, completion: { (err, awsUrl) in
             self.handleAwsServerImageUploadCompletion(err, awsUrl)
         })

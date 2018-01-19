@@ -11,6 +11,7 @@ import Foundation
 enum ServerKey: String {
     case result = "result"
     case data = "data"
+    case statusCode = "status_code"
     case message = "message"
     case appToken = "app_token"
     case userToken = "userToken"
@@ -21,14 +22,13 @@ enum ServerKey: String {
     case timestamp = "timestamp"
     case pageCount = "page_count"
     case offset = "offset"
+    case userType = "user_type"
     case deviceToken = "deviceToken"
     case realName = "realName"
+    case tripId = "trip_id"
+    case userId = "user_id"
+    case sinceTime = "since_time"
     case registerStatus = "registerStatus"
-    case department = "department"
-    case team = "team"
-    case request = "request"
-    case organizationName = "organizationName"
-    case statusCode = "statusCode"
 }
 
 // if changes the key in this map, MUST change also in the flagsTitle array

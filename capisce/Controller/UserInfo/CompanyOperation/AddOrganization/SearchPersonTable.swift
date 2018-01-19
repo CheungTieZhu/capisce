@@ -32,7 +32,7 @@ class SearchPersonTable: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchPersonTable.dequeueReusableCell(withIdentifier: "searchPersonCellId", for: indexPath) as! SearchPersonCell
         if let parentVC = self.parent as? AddOrganizationController{
-            if let realName = parentVC.userDictionary?.multipleUser[indexPath.row].realName{
+            if let realName = parentVC.realNameDisplay{
                 cell.userRealName.text = realName
                 cell.userHeadImg.layer.masksToBounds = true
                 cell.userHeadImg.layer.cornerRadius = CGFloat(Int(cell.userHeadImg.frame.width)/2)
